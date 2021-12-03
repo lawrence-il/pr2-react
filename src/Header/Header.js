@@ -2,7 +2,6 @@ import { Fragment } from 'react';
 import './header.sass';
 
 const Header = ({menuHeader}) => {
-    console.log(menuHeader);
     const elements = menuHeader.map(item => {
         return (
             <Fragment key={item.id}>

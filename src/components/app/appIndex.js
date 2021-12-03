@@ -1,7 +1,8 @@
 import { Component } from 'react';
 import Header from '../../Header/Header';
 import Promo from '../../Promo/Promo';
-import './appIndex.sass';
+import AboutUs from '../../AboutUs/AboutUs';
+import '../../media.sass';
 
 class appIndex extends Component {
   constructor(props) {
@@ -14,7 +15,7 @@ class appIndex extends Component {
       ]
     }
   }
-
+  
   render() {
     const {menuHeader} = this.state;
     return (
@@ -25,6 +26,7 @@ class appIndex extends Component {
                     <Promo/>
                 </div>
             </section>
+            <AboutUs/>
         </div>
     );
   }

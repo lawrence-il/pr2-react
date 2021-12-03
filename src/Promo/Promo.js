@@ -1,5 +1,5 @@
 import './promo.sass';
-import '../sass/subtitle.sass';
+import '../sass/text-h2.sass';
 import '../sass/beans.sass';
 import beans from '../elements/img/beans.svg'
 
@@ -15,8 +15,8 @@ const Promo = () => {
                 </div>
                 <div className="beans__line beans__line_white"></div>
             </div>
-            <h2 className="subtitle subtitle_one">We makes every day full of energy and taste</h2>
-            <h2 className="subtitle">Want to try our beans?</h2>
+            <h2 className="text-h2 text-h2_one">We makes every day full of energy and taste</h2>
+            <h2 className="text-h2">Want to try our beans?</h2>
             <button className="promo__btn">More</button>
         </div>
 
