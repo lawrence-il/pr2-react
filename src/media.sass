@@ -1,6 +1,21 @@
+@media (max-width: 992px)
+    .container
+        width: 720px
+    
+    .our-best
+        &__wrapper-item
+            &:nth-child(n+3)
+                margin-top: 20px
+
 @media (max-width: 768px)
     .container
         width: 540px
+
+    .our-best
+        &__wrapper-item
+            margin: 0 auto
+            &:nth-child(n+2)
+                margin-top: 20px
 
 @media (max-width: 576px)
     .container
