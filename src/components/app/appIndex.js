@@ -18,7 +18,7 @@ class appIndex extends Component {
     this.state = {
       menuHeader: [
         {text: 'Coffee house', url: '#', id: 1},
-        {text: 'Our coffee', url: '#', id: 2},
+        {text: 'Our coffee', url: './coffeePage.html', id: 2},
         {text: 'For your pleasure', url: '#', id: 3},
       ],
       itemsOurBest: [
