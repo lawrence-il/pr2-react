@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import Header from '../../Header/Header';
 import Promo from '../../Promo/Promo';
 import './appIndex.sass';
 
@@ -17,9 +18,14 @@ class appIndex extends Component {
   render() {
     const {menuHeader} = this.state;
     return (
-      <div className="appIndex">
-        <Promo menuHeader={menuHeader}/>
-      </div>
+        <div className="appIndex">
+            <section className="promo">
+                <div className="container">
+                    <Header menuHeader={menuHeader}/>
+                    <Promo/>
+                </div>
+            </section>
+        </div>
     );
   }
   
