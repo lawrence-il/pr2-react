@@ -26,7 +26,7 @@ class appIndex extends Component {
         {name: 'Solimo Coffee Beans', urlImgX1: solimoCoffeeBeansX1, urlImgX2: solimoCoffeeBeansX2, cost: 10.73, id: 1},
         {name: 'Presto Coffee Beans', urlImgX1: prestoCoffeeBeansX1, urlImgX2: prestoCoffeeBeansX2, cost: 15.99, id: 2},
         {name: 'AROMISTICO Coffee', urlImgX1: AROMISTICOCoffeeX1, urlImgX2: AROMISTICOCoffeeX2, cost: 6.99, id: 3},
-        {name: 'AROMISTICO Coffee', urlImgX1: AROMISTICOCoffeeX1, urlImgX2: AROMISTICOCoffeeX2, cost: 6.99, id: 3},
+        {name: 'AROMISTICO Coffee', urlImgX1: AROMISTICOCoffeeX1, urlImgX2: AROMISTICOCoffeeX2, cost: 6.99, id: 4},
       ],
     }
   }

@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import './header.sass';
 
 const Header = ({menuHeader, footer = false}) => {
-    const centerHeader = footer ? 'header_center' : ''
+    const centerHeader = footer ? 'header_center' : '';
     const elements = menuHeader.map(item => {
         return (
             <Fragment key={item.id}>
