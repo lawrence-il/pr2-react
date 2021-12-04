@@ -1,12 +1,12 @@
 import Header from '../Header/Header';
-import beansHTML from '../elements/beans';
+import beansHTML from '../beans/beans';
 import './footer.sass';
 
 
-const Footer = ({menuHeader}) => (
+const Footer = () => (
     <footer className="footer">
         <div className="container">
-            <Header menuHeader={menuHeader} footer={true}/>
+            <Header footer={true}/>
             {beansHTML}
         </div>
         

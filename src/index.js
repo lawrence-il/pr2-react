@@ -1,13 +1,18 @@
-import React from 'react';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import './index.sass';
-import App from './components/app/appIndex.js';
+import App from './components/app/App';
+import OurCoffee from './routes/OurCoffee/ourCoffee';
 
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App/>
-  </React.StrictMode>,
+  <BrowserRouter>
+	<Routes>
+		<Route path="/" element={<App />}/>
+		<Route path="ourCoffee" element={<OurCoffee />} />
+    </Routes>
+  </BrowserRouter>,
   document.querySelector('#root')
 );
 

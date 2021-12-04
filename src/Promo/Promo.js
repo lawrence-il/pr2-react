@@ -1,7 +1,7 @@
 import './promo.sass';
 import '../sass/text-h2.sass';
 import '../sass/beans.sass';
-import beans from '../elements/img/beans.svg'
+import beans from '../beans/img/beans.svg'
 
 const Promo = () => {
     return (

@@ -1,10 +1,8 @@
 import './about-us.sass';
 import '../sass/text-h2.sass';
-import beansHTML from '../elements/beans'
+import beansHTML from '../beans/beans'
 
-const AboutUs = () => (
-
-    <section className="about-us">
+const aboutUs = <section className="about-us">
         <div className="container">
             <h2 className="text-h2 text-h2_one text-h2_black">About Us</h2>
             {beansHTML}
@@ -26,6 +24,6 @@ const AboutUs = () => (
             </div>
         </div>
     </section>
-)
 
-export default AboutUs;
+
+export default aboutUs;

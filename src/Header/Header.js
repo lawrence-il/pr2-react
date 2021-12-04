@@ -1,14 +1,16 @@
-import { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import './header.sass';
 
-const Header = ({menuHeader, footer = false}) => {
+const Header = ({footer = false}) => {
+    const menuHeader = [
+        {text: 'Coffee house', url: '/', id: 1},
+        {text: 'Our coffee', url: '/ourCoffee', id: 2},
+        {text: 'For your pleasure', url: '/2', id: 3},
+      ];
     const centerHeader = footer ? 'header_center' : '';
     const elements = menuHeader.map(item => {
         return (
-            <Fragment key={item.id}>
-                <a className='header__link' href={item.url}>{item.text}</a>
-            </Fragment>
-
+                <Link key={item.id} className='header__link' to={item.url}>{item.text}</Link>
         )
     })
     return (
