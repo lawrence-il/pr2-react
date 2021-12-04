@@ -3,6 +3,7 @@ import Header from '../../Header/Header';
 import Promo from '../../Promo/Promo';
 import AboutUs from '../../AboutUs/AboutUs';
 import OurBest from '../../OurBest/OurBest';
+import Footer from '../../Footer/Footer';
 import '../../media.sass';
 
 import solimoCoffeeBeansX1 from '../../OurBest/img/SolimoCoffeeBeansX1.png';
@@ -42,6 +43,7 @@ class appIndex extends Component {
             </section>
             <AboutUs/>
             <OurBest itemsOurBest={itemsOurBest}/>
+            <Footer menuHeader={menuHeader}></Footer>
         </div>
     );
   }

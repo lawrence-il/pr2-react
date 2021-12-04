@@ -1,13 +1,13 @@
 import './about-us.sass';
 import '../sass/text-h2.sass';
-import beans from '../elements/beans'
+import beansHTML from '../elements/beans'
 
 const AboutUs = () => (
 
     <section className="about-us">
         <div className="container">
             <h2 className="text-h2 text-h2_one text-h2_black">About Us</h2>
-            {beans}
+            {beansHTML}
             <div className="about-us__wrapper-par">
                 <p className="about-us__text">
                     Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
