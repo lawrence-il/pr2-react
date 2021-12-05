@@ -1,9 +1,7 @@
 import { Component } from 'react';
 import Header from '../../Header/Header';
 import aboutOurBeans from '../../aboutOurBeans/aboutOurBeans';
-import SearchPanel from "../../SearchPanel/SearchPanel";
-import FilterPanel from '../../FilterPanel/FilterPanel';
-import GradesCoffeeCards from '../../GradesCoffeeCards/GradesCoffeeCards';
+import GradesCoffee from '../../GradesCoffee/GradesCoffee';
 
 
 import './ourCoffee.sass';
@@ -64,7 +62,7 @@ class ourCoffee extends Component {
 
 	filterUpdateState = (filterValue) => {
 		this.setState({
-			filter: this.state.filter === 'All' ? filterValue : 'All'
+			filter: this.state.filter === filterValue ? 'All' : filterValue
 		})
 	}
 
@@ -81,9 +79,9 @@ class ourCoffee extends Component {
 		}
 	}
 
-    render(){
+    render() {
 		const {gradesCoffee, search, filter} = this.state;
-		const visibleCoffee = this.filterCoffee(this.showCoffee(gradesCoffee,search), filter)
+		const visibleCoffeeCard = this.filterCoffee(this.showCoffee(gradesCoffee,search), filter)
             return (
             <div className="our-coffee-page">
 
@@ -98,25 +96,12 @@ class ourCoffee extends Component {
 
                 {aboutOurBeans}
 
-				<section className="grades-coffee">
-					<div className="container">
-						<div className="grades-coffee__choose-panel">
-							<div className="grades-coffee__search">
-								<div className="grades-coffee__text">
-										Looking for
-								</div>
-								<SearchPanel searchCoffee={this.searchCoffee}/>
-							</div>
-							<div className="grades-coffee__filter">
-								<div className="grades-coffee__text">
-									Or filter
-								</div>
-								<FilterPanel filterUpdateState={this.filterUpdateState}/>
-								<GradesCoffeeCards gradesCoffee={visibleCoffee}/>
-							</div>
-						</div>
-					</div>	
-        		</section>
+				<GradesCoffee 
+					searchCoffee={this.searchCoffee}
+					filterUpdateState={this.filterUpdateState}
+					visibleCoffeeCard={visibleCoffeeCard}
+					/>
+				
 			</div>
             );
 
