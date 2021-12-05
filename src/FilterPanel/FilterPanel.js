@@ -5,7 +5,7 @@ const FilterPanel = ({filterUpdateState}) => {
     return filters.map((item, i) => (
         <Fragment key={i}>
             <button 
-                className="grades-coffee__btns" 
+                className="grades-coffee__btn" 
                 onClick={() => filterUpdateState(item)}>{item}</button>
         </Fragment>
     ))

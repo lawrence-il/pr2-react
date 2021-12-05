@@ -2,13 +2,15 @@ import SearchPanel from "../SearchPanel/SearchPanel";
 import FilterPanel from '../FilterPanel/FilterPanel';
 import GradesCoffeeCards from '../GradesCoffeeCards/GradesCoffeeCards';
 
+import './grades-coffee.sass';
+
 const GradesCoffee = ({searchCoffee, filterUpdateState, visibleCoffeeCard}) => (
     <section className="grades-coffee">
         <div className="container">
             <div className="grades-coffee__choose-panel">
                 <div className="grades-coffee__search">
                     <div className="grades-coffee__text">
-                            Looking for
+                        Looking for
                     </div>
                     <SearchPanel searchCoffee={searchCoffee}/>
                 </div>
@@ -17,9 +19,9 @@ const GradesCoffee = ({searchCoffee, filterUpdateState, visibleCoffeeCard}) => (
                         Or filter
                     </div>
                     <FilterPanel filterUpdateState={filterUpdateState}/>
-                    <GradesCoffeeCards visibleCoffeeCard={visibleCoffeeCard}/>
                 </div>
             </div>
+            <GradesCoffeeCards visibleCoffeeCard={visibleCoffeeCard}/>
         </div>	
     </section>
 )

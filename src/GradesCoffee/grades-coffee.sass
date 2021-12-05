@@ -1,0 +1,60 @@
+.grades-coffee
+    padding: 60px 0 20px
+    &__choose-panel
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: calc( 700px / 1150px * 100%)
+        margin: 0 auto
+    &__text
+        display: flex
+        align-items: center
+        font-weight: 400
+        font-size: 14px
+        line-height: 20px
+        color: #000000
+    &__search
+        display: flex
+        justify-content: space-between
+        width: calc(285px / 700px * 100%)
+    &__input
+        width: 180px
+        height: 30px
+        background: #FFFFFF
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25)
+        border: none
+        border-radius: 4px
+        padding: 6px 36px
+        &::placeholder
+            text-align: center
+            font-weight: 400
+            font-size: 12px
+            line-height: 17px
+    &__filter
+        display: flex
+        flex-wrap: wrap
+        width: calc(330px / 700px * 100%)
+    &__filter > &__text
+        margin-right: 35px
+    &__btn
+        width: 75px
+        height: 35px
+        margin-right: 5px
+        background: #FFFFFF
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25)
+        border: none
+
+        font-weight: 400
+        font-size: 12px
+        line-height: 17px
+        transition-duration: 0.6s
+        &:last-of-type
+            margin-right: 0
+            border-radius: 0px 4px 4px 0px
+        &:first-of-type
+            border-radius: 4px 0px 0px 4px
+        &:hover
+            background: #000
+            color: #fff
+
+            
