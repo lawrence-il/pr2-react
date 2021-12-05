@@ -2,6 +2,7 @@ import { Component } from 'react';
 import Header from '../../Header/Header';
 import aboutOurBeans from '../../aboutOurBeans/aboutOurBeans';
 import GradesCoffee from '../../GradesCoffee/GradesCoffee';
+import Footer from '../../Footer/Footer';
 
 
 import './ourCoffee.sass';
@@ -128,7 +129,7 @@ class ourCoffee extends Component {
 					filterUpdateState={this.filterUpdateState}
 					visibleCoffeeCard={visibleCoffeeCard}
 					/>
-				
+				<Footer/>
 			</div>
             );
 

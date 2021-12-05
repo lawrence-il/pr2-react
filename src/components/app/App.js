@@ -31,7 +31,7 @@ class App extends Component {
             </section>
             {aboutUs}
             <OurBest itemsOurBest={itemsOurBest}/>
-            <Footer></Footer>
+            <Footer/>
         </div>
     );
   }
