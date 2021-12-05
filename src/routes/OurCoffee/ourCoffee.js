@@ -6,6 +6,7 @@ import aboutOurBeans from '../../aboutOurBeans/aboutOurBeans';
 import './ourCoffee.sass';
 import '../../sass/text-h2.sass';
 
+
 class ourCoffee extends Component {
     constructor(props) {
         super(props);

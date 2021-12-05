@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import './index.sass';
 import App from './components/app/App';
 import OurCoffee from './routes/OurCoffee/ourCoffee';
-
+import './media-index.sass';
 
 ReactDOM.render(
   <BrowserRouter>

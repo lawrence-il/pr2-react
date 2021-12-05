@@ -4,7 +4,6 @@ import Promo from '../../Promo/Promo';
 import aboutUs from '../../aboutUs/AboutUs';
 import OurBest from '../../OurBest/OurBest';
 import Footer from '../../Footer/Footer';
-import '../../media-index.sass';
 
 
 class App extends Component {
