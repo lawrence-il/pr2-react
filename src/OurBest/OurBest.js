@@ -13,7 +13,7 @@ const OurBest = ({itemsOurBest}) => {
                     {name}
                 </div>
                 <div className="our-best__cost">
-                    {cost}
+                    {`${cost}$`}
                 </div>
             </div>
         </Fragment>
