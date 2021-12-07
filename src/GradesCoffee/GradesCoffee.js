@@ -1,7 +1,6 @@
 import SearchPanel from "../SearchPanel/SearchPanel";
 import FilterPanel from '../FilterPanel/FilterPanel';
 import GradesCoffeeCards from '../GradesCoffeeCards/GradesCoffeeCards';
-
 import './grades-coffee.sass';
 
 const GradesCoffee = ({searchCoffee, filterUpdateState, visibleCoffeeCard}) => (
