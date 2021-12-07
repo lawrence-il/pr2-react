@@ -1,23 +1,26 @@
-import { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import './OurBest.sass';
 import '../sass/text-h2.sass';
 
 const OurBest = ({itemsOurBest}) => {
-    const elements = itemsOurBest.map(({name, urlImgX1, urlImgX2, cost, id}) => (
-        <Fragment key={id}>
-            <div className="our-best__wrapper-item">
-                <div className="our-best__wrapper-img">
-                    <img src={urlImgX1} srcSet={`${urlImgX1} x1, ${urlImgX2} x2`} alt={name} className="our-best__img"/>
-                </div>
-                <div className="our-best__subtitle">
-                    {name}
-                </div>
-                <div className="our-best__cost">
-                    {`${cost}$`}
-                </div>
-            </div>
-        </Fragment>
-    ))
+    const elements = itemsOurBest.map(({name, urlImgX1, urlImgX2, cost, id, best}) => {
+        if (best) {
+            return (
+                <Link key={id} className="our-best__wrapper-item" to={`/ourCoffee/about-it/${id}`}>
+                    <div className="our-best__wrapper-img">
+                        <img src={urlImgX1} srcSet={`${urlImgX1} x1, ${urlImgX2} x2`} alt={name} className="our-best__img"/>
+                    </div>
+                    <div className="our-best__subtitle">
+                        {name}
+                    </div>
+                    <div className="our-best__cost">
+                        {`${cost}$`}
+                    </div>
+                </Link>
+        )}  
+        return '';
+    })
+    
     
     return (
         <section className="our-best">
