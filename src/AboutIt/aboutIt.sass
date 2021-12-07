@@ -2,9 +2,17 @@
     &__wrapper
         padding: 70px 0 0
         display: flex
+        flex-wrap: wrap
         justify-content: space-between
         width: calc(865px / 1150px * 100%)
         margin: 0 auto
+    &__wrapper-img
+        width: 392px
+        height: 355px
+        & img
+            width: 100%
+            height: 100%
+            object-fit: cover
     &__country, &__text, &__cost
         & span
             font-weight: 700
