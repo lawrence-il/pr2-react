@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useLocation } from "react-router";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
@@ -8,19 +9,26 @@ import './aboutIt.sass'
 
 
 
-const AboutIt = () => {
+const AboutIt = ({ToggleMenu}) => {
 
     let location = useLocation();
     let id = +location.pathname.match(/\d+/);
 
     const choiceItem = gradesCoffee.filter(item => item.id === id);
     const {name, urlDetailsImg, desc, country, cost} = choiceItem[0];
+
+    let [toggleState, setToggleState] = useState(0);
+
+    const toggleMenu = (e) => {
+		let toggleStateMenu = ToggleMenu(e, toggleState);
+		setToggleState(toggleStateMenu);
+	  }
     
-    return <div className="our-coffee-page">
+    return <div className="our-coffee-page" onClick={toggleMenu}>
 
         <section className="our-coffee">
                     <div className="container">
-                    <Header/>
+                    <Header toggleState={toggleState}/>
                     <h1 className="our-coffee__title">
                         Our Coffee
                     </h1>

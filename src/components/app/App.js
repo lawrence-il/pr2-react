@@ -12,16 +12,24 @@ class App extends Component {
     super(props);
     this.state = {
       itemsOurBest: itemsOurBest,
+      toggleState: 0,
     }
   }
   
+  toggleMenu = (e) => {
+    const toggleState = this.props.ToggleMenu(e, this.state.toggleState);
+    this.setState({
+      toggleState: toggleState
+    })
+  }
+
   render() {
-    const {itemsOurBest} = this.state;
+    const {itemsOurBest, toggleState} = this.state;
     return (
-        <div className="app">
+        <div className="app" onClick={this.toggleMenu}>
             <section className="promo">
                 <div className="container">
-                    <Header/>
+                    <Header toggleState={toggleState}/>
                     <Promo/>
                 </div>
             </section>

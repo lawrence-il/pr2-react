@@ -1,13 +1,17 @@
 import { Link } from 'react-router-dom';
 import './header.sass';
 
-const Header = ({footer = false}) => {
+const Header = ({toggleState, footer = false}) => {
     const menuHeader = [
         {text: 'Coffee house', url: '/', id: 1},
         {text: 'Our coffee', url: '/ourCoffee', id: 2},
         {text: 'For your pleasure', url: '/2', id: 3},
       ];
-    const centerHeader = footer ? 'header_center' : '';
+    const centerHeader = footer ? 'header_center' : '',
+        humburgerHeader = footer ? 'header__humburger_footer' : '',
+        footerHeader = footer ? 'header__humburger-menu_footer' : '',
+        toggle = toggleState ? 'header__active' : '';
+        
     const elements = menuHeader.map(item => {
         return (
                 <Link key={item.id} className='header__link' to={item.url}>{item.text}</Link>
@@ -15,7 +19,10 @@ const Header = ({footer = false}) => {
     })
     return (
         <header className={`header ${centerHeader}`}>
-            <ul>
+            <div className={`header__humburger ${humburgerHeader}`}>
+                <div className="header__humburger-line"></div>
+            </div>
+            <ul className={`header__humburger-menu ${footerHeader} ${toggle}`}>
                 {elements}
             </ul>
         </header>

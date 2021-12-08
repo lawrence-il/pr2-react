@@ -17,6 +17,7 @@ class ourCoffee extends Component {
 			gradesCoffee: gradesCoffee,
 			search: '',
 			filter: 'All',
+			toggleState: 0,
 		}
     }
     
@@ -53,15 +54,22 @@ class ourCoffee extends Component {
 		}
 	}
 
+	toggleMenu = (e) => {
+		const toggleState = this.props.ToggleMenu(e, this.state.toggleState);
+		this.setState({
+		  toggleState: toggleState
+		})
+	  }
+
     render() {
-		const {gradesCoffee, search, filter} = this.state;
+		const {gradesCoffee, search, filter, toggleState} = this.state;
 		const visibleCoffeeCard = this.filterCoffee(this.showCoffee(gradesCoffee,search), filter)
             return (
-            <div className="our-coffee-page">
+            <div className="our-coffee-page" onClick={this.toggleMenu}>
 
                 <section className="our-coffee">
                           <div className="container">
-                            <Header/>
+                            <Header toggleState={toggleState}/>
                             <h1 className="our-coffee__title">
                               Our Coffee
                             </h1>
