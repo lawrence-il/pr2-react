@@ -91,7 +91,7 @@
             padding: 60px 40px 40px
             z-index: 1000
             overflow: auto
-            transition-duration: 0.8s
+            transition-duration: 0.7s
         &__link
             text-align: center
             margin: 0 0 15px
@@ -108,23 +108,43 @@
             top: 15px
             right: 20px
         &__humburger-line
+            position: relative
             width: 44px
             height: 1px
             background: #000
+            transition-duration: 0.7s
             &::after
-                position: absolute
+                position: relative
+                display: block
                 content: ''
                 width: 44px
                 height: 1px
-                top: 16px
+                top: 7px
                 background: #000
+                transition-duration: 0.7s
             &::before
-                position: absolute
+                position: relative
+                display: block
                 content: ''
                 width: 44px
                 height: 1px
-                bottom: 15px
+                bottom: 8px
                 background: #000
+                transition-duration: 0.7s
+        &__humburger-line_cross
+            width: 0px
+            &::after
+                position: relative
+                display: block
+                content: ''
+                transform: rotate(45deg) translateX(-74%)
+                top: 22px
+            &::before
+                position: relative
+                display: block
+                content: ''
+                transform: rotate(-45deg) translateX(-74%)
+                bottom: 23px
         &__humburger_footer
             display: none
         &__humburger-menu_footer
