@@ -1,7 +1,8 @@
 import { Component } from "react/cjs/react.production.min";
 import gradesCoffee from '../../data';
 import Header from '../Header/Header';
-import img from './img/cup.png';
+import img1 from './img/cup.png';
+import img2 from "./img/cup2.png";
 import AboutOurBeans from '../AboutOurBeans/AboutOurBeans';
 import GradesCoffeeCards from '../GradesCoffeeCards/GradesCoffeeCards'
 import Footer from '../Footer/Footer';
@@ -38,7 +39,7 @@ class ForYourPleasure extends Component {
                           </div>
                 </section>
 
-                <AboutOurBeans classSection='about-our-goods' img={img}/>
+                <AboutOurBeans classSection='about-our-goods' img1={img1} img2={img2}/>
 
 				<GradesCoffeeCards visibleCoffeeCard={gradesCoffee}/>
 

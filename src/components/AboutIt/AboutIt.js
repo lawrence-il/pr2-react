@@ -15,7 +15,7 @@ const AboutIt = ({ToggleMenu}) => {
     let id = +location.pathname.match(/\d+/);
 
     const choiceItem = gradesCoffee.filter(item => item.id === id);
-    const {name, urlDetailsImg, desc, country, cost} = choiceItem[0];
+    const {name, urlDetailsImg, urlDetailsImg2, desc, country, cost} = choiceItem[0];
 
     let [toggleState, setToggleState] = useState(0);
 
@@ -40,7 +40,7 @@ const AboutIt = ({ToggleMenu}) => {
                 <div className="about-it__wrapper">
 
                     <div className="about-it__wrapper-img">
-                        <img src={urlDetailsImg} alt={name} className="about-it__img" />
+                        <img src={urlDetailsImg} srcSet={`${urlDetailsImg} 1x, ${urlDetailsImg2} 2x`} alt={name} className="about-it__img" />
                     </div>
                     <div className="about-it__desc">
                         <h2 className="text-h2 text-h2_one text-h2_black">About it</h2>

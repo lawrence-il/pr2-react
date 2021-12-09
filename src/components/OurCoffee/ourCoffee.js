@@ -1,7 +1,8 @@
 import { Component } from 'react';
 import gradesCoffee from '../../data';
 import Header from '../Header/Header';
-import img from "../AboutOurBeans/img/img1.png";
+import img1 from "../AboutOurBeans/img/img1.png";
+import img2 from "../AboutOurBeans/img/img2.png";
 import AboutOurBeans from '../AboutOurBeans/AboutOurBeans';
 import GradesCoffee from '../GradesCoffee/GradesCoffee';
 import GradesCoffeeCards from '../GradesCoffeeCards/GradesCoffeeCards'
@@ -77,7 +78,7 @@ class ourCoffee extends Component {
                           </div>
                 </section>
 
-                <AboutOurBeans classSection='about-our-beans' img={img}/>
+                <AboutOurBeans classSection='about-our-beans' img1={img1} img2={img2}/>
 
 				<GradesCoffee 
 					searchCoffee={this.searchCoffee}

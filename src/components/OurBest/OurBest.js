@@ -8,7 +8,7 @@ const OurBest = ({itemsOurBest}) => {
             return (
                 <Link key={id} className="our-best__wrapper-item" to={`/ourCoffee/about-it/${id}`}>
                     <div className="our-best__wrapper-img">
-                        <img src={urlImgX1} srcSet={`${urlImgX1} x1, ${urlImgX2} x2`} alt={name} className="our-best__img"/>
+                        <img src={urlImgX1} srcSet={`${urlImgX1} 1x, ${urlImgX2} 2x`} alt={name} className="our-best__img"/>
                     </div>
                     <div className="our-best__subtitle">
                         {name}

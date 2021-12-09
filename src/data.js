@@ -4,6 +4,7 @@ const data = [
         urlImgX1: "./img/AROMISTICOCoffeeX1.png", 
         urlImgX2: './img/AROMISTICOCoffeeX2.png', 
         urlDetailsImg: './img/details-img.png',
+        urlDetailsImg2: './img/details-img2.png',
         country: 'Brazil', 
         desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
             ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
@@ -16,6 +17,7 @@ const data = [
         urlImgX1: "./img/PrestoCoffeeBeansX1.png", 
         urlImgX2: './img/PrestoCoffeeBeansX2.png', 
         urlDetailsImg: './img/details-img.png',
+        urlDetailsImg2: './img/details-img2.png',
         country: 'Kenya', 
         desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
             ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
@@ -28,6 +30,7 @@ const data = [
         urlImgX1: "./img/SolimoCoffeeBeansX1.png", 
         urlImgX2: './img/SolimoCoffeeBeansX2.png', 
         urlDetailsImg: './img/details-img.png',
+        urlDetailsImg2: './img/details-img2.png',
         country: 'Columbia', 
         desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
             ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
@@ -40,6 +43,7 @@ const data = [
         urlImgX1: "./img/AROMISTICOCoffeeX1.png", 
         urlImgX2: './img/AROMISTICOCoffeeX2.png', 
         urlDetailsImg: './img/details-img.png',
+        urlDetailsImg2: './img/details-img2.png',
         country: 'Brazil', 
         desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
             ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
@@ -52,6 +56,7 @@ const data = [
         urlImgX1: "./img/SolimoCoffeeBeansX1.png", 
         urlImgX2: './img/SolimoCoffeeBeansX2.png', 
         urlDetailsImg: './img/details-img.png',
+        urlDetailsImg2: './img/details-img2.png',
         country: 'Columbia', 
         desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
             ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
@@ -64,6 +69,7 @@ const data = [
         urlImgX1: "./img/PrestoCoffeeBeansX1.png", 
         urlImgX2: './img/PrestoCoffeeBeansX2.png', 
         urlDetailsImg: './img/details-img.png',
+        urlDetailsImg2: './img/details-img2.png',
         country: 'Kenya', 
         desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
             ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,

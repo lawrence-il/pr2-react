@@ -3,14 +3,14 @@ import './aboutOurBeans.sass';
 
 
 
-const AboutOurBeans = ({classSection, img}) => {
+const AboutOurBeans = ({classSection, img1, img2}) => {
     return (
         <section className={classSection}>
         <div className="container">
             <div className={`${classSection}__wrapper`}>
 
                 <div className={`${classSection}__wrapper-img`}>
-                    <img src={img} alt="our coffee" className={`${classSection}__img`} />
+                    <img src={img1} srcSet={`${img1} 1x, ${img2} 2x`} alt="our coffee" className={`${classSection}__img`} />
                 </div>
                 <div className={`${classSection}__desc`}>
                     <h2 className="text-h2 text-h2_one text-h2_black">{classSection === 'about-our-beans' ? 'About our beans' : 'About our goods'}</h2>
