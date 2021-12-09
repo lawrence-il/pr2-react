@@ -1,5 +1,5 @@
 import Header from '../Header/Header';
-import beansHTML from '../beans/beans';
+import beansHTML from '../../beans/beans';
 import './footer.sass';
 
 

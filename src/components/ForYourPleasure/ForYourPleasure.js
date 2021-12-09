@@ -1,5 +1,5 @@
 import { Component } from "react/cjs/react.production.min";
-import gradesCoffee from '../data';
+import gradesCoffee from '../../data';
 import Header from '../Header/Header';
 import img from './img/cup.png';
 import AboutOurBeans from '../AboutOurBeans/AboutOurBeans';

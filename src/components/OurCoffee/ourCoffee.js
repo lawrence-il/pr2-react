@@ -1,11 +1,11 @@
 import { Component } from 'react';
 import gradesCoffee from '../../data';
-import Header from '../../Header/Header';
-import img from "../../AboutOurBeans/img/img1.png";
-import AboutOurBeans from '../../AboutOurBeans/AboutOurBeans';
-import GradesCoffee from '../../GradesCoffee/GradesCoffee';
-import GradesCoffeeCards from '../../GradesCoffeeCards/GradesCoffeeCards'
-import Footer from '../../Footer/Footer';
+import Header from '../Header/Header';
+import img from "../AboutOurBeans/img/img1.png";
+import AboutOurBeans from '../AboutOurBeans/AboutOurBeans';
+import GradesCoffee from '../GradesCoffee/GradesCoffee';
+import GradesCoffeeCards from '../GradesCoffeeCards/GradesCoffeeCards'
+import Footer from '../Footer/Footer';
 
 
 import './ourCoffee.sass';

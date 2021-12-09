@@ -1,6 +1,6 @@
 import './promo.sass';
-import '../sass/beans.sass';
-import beans from '../beans/img/beans.svg'
+import '../../sass/beans.sass';
+import beans from '../../beans/img/beans.svg'
 
 const Promo = () => {
     return (

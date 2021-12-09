@@ -1,10 +1,10 @@
 import { Component } from 'react';
 import itemsOurBest from '../../data';
-import Header from '../../Header/Header';
-import Promo from '../../Promo/Promo';
+import Header from '../Header/Header';
+import Promo from '../Promo/Promo';
 import aboutUs from '../../aboutUs/AboutUs';
-import OurBest from '../../OurBest/OurBest';
-import Footer from '../../Footer/Footer';
+import OurBest from '../OurBest/OurBest';
+import Footer from '../Footer/Footer';
 
 
 class App extends Component {

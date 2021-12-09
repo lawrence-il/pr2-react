@@ -2,11 +2,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import './index.sass';
 import './sass/text-h2.sass';
-import ToggleMenu from './ToogleMenu/ToggleMenu';
+import ToggleMenu from './components/ToogleMenu/ToggleMenu';
 import App from './components/app/App';
-import OurCoffee from './routes/OurCoffee/ourCoffee';
-import AboutIt from './AboutIt/AboutIt';
-import ForYourPleasure from './ForYourPleasure/ForYourPleasure';
+import OurCoffee from './components/OurCoffee/ourCoffee';
+import AboutIt from './components/AboutIt/AboutIt';
+import ForYourPleasure from './components/ForYourPleasure/ForYourPleasure';
 import './media-index.sass';
 
 

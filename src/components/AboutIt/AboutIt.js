@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { useLocation } from "react-router";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-import gradesCoffee from "../data";
-import beansHTML from "../beans/beans";
-import '../routes/OurCoffee/ourCoffee.sass';
+import gradesCoffee from "../../data";
+import beansHTML from "../../beans/beans";
+import '../OurCoffee/ourCoffee.sass';
 import './aboutIt.sass'
 
 
