@@ -22,9 +22,11 @@ const Header = ({toggleState, footer = false}) => {
             <div className={`header__humburger ${humburgerHeader}`}>
                 <div className={`header__humburger-line ${cross}`}></div>
             </div>
-            <ul className={`header__humburger-menu ${footerHeader} ${toggle}`}>
-                {elements}
-            </ul>
+            <nav>
+                <ul className={`header__menu header__humburger-menu ${footerHeader} ${toggle}`}>
+                    {elements}
+                </ul>
+            </nav>
         </header>
     )
 }
