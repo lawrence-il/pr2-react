@@ -1,5 +1,4 @@
 import './promo.sass';
-import '../sass/text-h2.sass';
 import '../sass/beans.sass';
 import beans from '../beans/img/beans.svg'
 

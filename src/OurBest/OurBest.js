@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import './OurBest.sass';
-import '../sass/text-h2.sass';
+
 
 const OurBest = ({itemsOurBest}) => {
     const elements = itemsOurBest.map(({name, urlImgX1, urlImgX2, cost, id, best}) => {

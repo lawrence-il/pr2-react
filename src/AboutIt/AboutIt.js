@@ -43,7 +43,7 @@ const AboutIt = ({ToggleMenu}) => {
                         <img src={urlDetailsImg} alt={name} className="about-it__img" />
                     </div>
                     <div className="about-it__desc">
-                        <h2 className="text-h2 text-h2_one text-h2_black">About our beans</h2>
+                        <h2 className="text-h2 text-h2_one text-h2_black">About it</h2>
                         {beansHTML}
                         <div className="about-it__country">
                             <span>Country: </span>

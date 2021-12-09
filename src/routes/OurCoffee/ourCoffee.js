@@ -1,14 +1,14 @@
 import { Component } from 'react';
 import gradesCoffee from '../../data';
 import Header from '../../Header/Header';
-import aboutOurBeans from '../../aboutOurBeans/aboutOurBeans';
+import img from "../../AboutOurBeans/img/img1.png";
+import AboutOurBeans from '../../AboutOurBeans/AboutOurBeans';
 import GradesCoffee from '../../GradesCoffee/GradesCoffee';
 import GradesCoffeeCards from '../../GradesCoffeeCards/GradesCoffeeCards'
 import Footer from '../../Footer/Footer';
 
 
 import './ourCoffee.sass';
-import '../../sass/text-h2.sass';
 
 
 class ourCoffee extends Component {
@@ -60,7 +60,7 @@ class ourCoffee extends Component {
 		this.setState({
 		  toggleState: toggleState
 		})
-	  }
+	}
 
     render() {
 		const {gradesCoffee, search, filter, toggleState} = this.state;
@@ -77,7 +77,7 @@ class ourCoffee extends Component {
                           </div>
                 </section>
 
-                {aboutOurBeans}
+                <AboutOurBeans classSection='about-our-beans' img={img}/>
 
 				<GradesCoffee 
 					searchCoffee={this.searchCoffee}

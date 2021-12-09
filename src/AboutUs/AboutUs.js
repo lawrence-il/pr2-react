@@ -1,5 +1,5 @@
 import './about-us.sass';
-import '../sass/text-h2.sass';
+
 import beansHTML from '../beans/beans'
 
 const aboutUs = <section className="about-us">
