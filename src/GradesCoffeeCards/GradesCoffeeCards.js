@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import './gradesCoffeeCards.sass';
 
 const GradesCoffeeCards = ({visibleCoffeeCard}) => {
     const cards = visibleCoffeeCard.map(({id, name, urlImgX1, urlImgX2, country, cost}) => (
@@ -19,10 +20,12 @@ const GradesCoffeeCards = ({visibleCoffeeCard}) => {
         </Link>
     ))
     return (
+
+    <div className="container">
         <div className="grades-coffee__cards">
             {cards}
         </div>
-        
+    </div>  
     )
 }
 

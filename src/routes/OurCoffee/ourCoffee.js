@@ -3,6 +3,7 @@ import gradesCoffee from '../../data';
 import Header from '../../Header/Header';
 import aboutOurBeans from '../../aboutOurBeans/aboutOurBeans';
 import GradesCoffee from '../../GradesCoffee/GradesCoffee';
+import GradesCoffeeCards from '../../GradesCoffeeCards/GradesCoffeeCards'
 import Footer from '../../Footer/Footer';
 
 
@@ -81,8 +82,9 @@ class ourCoffee extends Component {
 				<GradesCoffee 
 					searchCoffee={this.searchCoffee}
 					filterUpdateState={this.filterUpdateState}
-					visibleCoffeeCard={visibleCoffeeCard}
 					/>
+				<GradesCoffeeCards visibleCoffeeCard={visibleCoffeeCard}/>
+
 				<Footer/>
 			</div>
             );
