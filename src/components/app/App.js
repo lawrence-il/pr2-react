@@ -5,6 +5,7 @@ import Promo from '../Promo/Promo';
 import aboutUs from '../../aboutUs/AboutUs';
 import OurBest from '../OurBest/OurBest';
 import Footer from '../Footer/Footer';
+import ArrowUp from '../ArrowUp/ArrowUp';
 
 
 class App extends Component {
@@ -13,6 +14,7 @@ class App extends Component {
     this.state = {
       itemsOurBest: itemsOurBest,
       toggleState: 0,
+      scrollCount: 0,
     }
   }
   
@@ -23,19 +25,44 @@ class App extends Component {
     })
   }
 
+  pageUp = () => {
+    this.setState(({scrollCount}) => {
+
+      if(document.documentElement.scrollTop >= 300 && scrollCount < 1) {
+        console.log(document.documentElement.scrollTop)
+        return {
+          scrollCount:  scrollCount + 0.5
+          }
+      } else if (document.documentElement.scrollTop <= 300 && scrollCount > 0) {
+        console.log(document.documentElement.scrollTop)
+        return {
+          scrollCount: scrollCount - 0.5
+          }
+      }
+    })
+         
+  }
+
   render() {
-    const {itemsOurBest, toggleState} = this.state;
+    console.log(document.documentElement.scrollTop);
+    const {itemsOurBest, toggleState, scrollCount} = this.state;
     return (
-        <div className="app" onClick={this.toggleMenu}>
+        <div className="app" onWheel={this.pageUp} onClick={this.toggleMenu}>
             <section className="promo">
                 <div className="container">
                     <Header toggleState={toggleState}/>
                     <Promo/>
                 </div>
             </section>
+
             {aboutUs}
+          
             <OurBest itemsOurBest={itemsOurBest}/>
+            
             <Footer/>
+
+            <ArrowUp opac={scrollCount}/>
+
         </div>
     );
   }
