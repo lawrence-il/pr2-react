@@ -6,6 +6,7 @@ import img2 from "./img/cup2.png";
 import AboutOurBeans from '../AboutOurBeans/AboutOurBeans';
 import GradesCoffeeCards from '../GradesCoffeeCards/GradesCoffeeCards'
 import Footer from '../Footer/Footer';
+import ArrowUp from "../ArrowUp/ArrowUp";
 import './forYourPleasure.sass';
 
 
@@ -15,6 +16,7 @@ class ForYourPleasure extends Component {
         this.state = {
             gradesCoffee: gradesCoffee,
             toggleState: 0,
+            scrollCount: 0,
         };
     }
 
@@ -25,10 +27,28 @@ class ForYourPleasure extends Component {
 		})
 	}
 
+    pageUp = () => {
+
+        const {scrollTop, scrollWidth} = document.documentElement
+    
+        this.setState(({scrollCount}) => {
+          if(scrollTop >= 300 && scrollCount < 1) {
+            return {
+              scrollCount: scrollTop <= scrollWidth ? 1 : scrollCount + 0.25
+              }
+          } else if (scrollTop <= 300 && scrollCount > 0) {
+              return {
+                scrollCount: scrollTop <= 100 ? 0 : scrollCount - 0.35
+                }
+          }
+        })
+             
+      }
+
     render() {
-        const {gradesCoffee, toggleState} = this.state;
+        const {gradesCoffee, toggleState, scrollCount} = this.state;
         return (
-            <div className="for-your-pleasure-page" onClick={this.toggleMenu}>
+            <div className="for-your-pleasure-page" onWheel={this.pageUp} onClick={this.toggleMenu}>
 
                 <section className="for-your-pleasure">
                           <div className="container">
@@ -44,6 +64,8 @@ class ForYourPleasure extends Component {
 				<GradesCoffeeCards visibleCoffeeCard={gradesCoffee}/>
 
 				<Footer/>
+
+                <ArrowUp opac={scrollCount}/>
 			</div>
 
         )

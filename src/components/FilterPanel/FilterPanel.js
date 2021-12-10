@@ -1,7 +1,9 @@
 import { Fragment } from "react";
 
 const FilterPanel = ({filterUpdateState}) => {
+
     const filters = ['Brazil', 'Kenya', 'Columbia']
+    
     return filters.map((item, i) => (
         <Fragment key={i}>
             <button 

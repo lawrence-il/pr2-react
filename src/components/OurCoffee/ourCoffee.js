@@ -7,6 +7,7 @@ import AboutOurBeans from '../AboutOurBeans/AboutOurBeans';
 import GradesCoffee from '../GradesCoffee/GradesCoffee';
 import GradesCoffeeCards from '../GradesCoffeeCards/GradesCoffeeCards'
 import Footer from '../Footer/Footer';
+import ArrowUp from '../ArrowUp/ArrowUp';
 
 
 import './ourCoffee.sass';
@@ -20,6 +21,7 @@ class ourCoffee extends Component {
 			search: '',
 			filter: 'All',
 			toggleState: 0,
+			scrollCount: 0,
 		}
     }
     
@@ -63,11 +65,30 @@ class ourCoffee extends Component {
 		})
 	}
 
+
+	pageUp = () => {
+
+		const {scrollTop, scrollWidth} = document.documentElement
+	
+		this.setState(({scrollCount}) => {
+		  if(scrollTop >= 300 && scrollCount < 1) {
+			return {
+			  scrollCount: scrollTop <= scrollWidth ? 1 : scrollCount + 0.25
+			  }
+		  } else if (scrollTop <= 300 && scrollCount > 0) {
+			  return {
+				scrollCount: scrollTop <= 100 ? 0 : scrollCount - 0.35
+				}
+		  }
+		})
+			 
+	  }
+
     render() {
-		const {gradesCoffee, search, filter, toggleState} = this.state;
+		const {gradesCoffee, search, filter, toggleState, scrollCount} = this.state;
 		const visibleCoffeeCard = this.filterCoffee(this.showCoffee(gradesCoffee,search), filter)
             return (
-            <div className="our-coffee-page" onClick={this.toggleMenu}>
+            <div className="our-coffee-page" onWheel={this.pageUp} onClick={this.toggleMenu}>
 
                 <section className="our-coffee">
                           <div className="container">
@@ -87,6 +108,8 @@ class ourCoffee extends Component {
 				<GradesCoffeeCards visibleCoffeeCard={visibleCoffeeCard}/>
 
 				<Footer/>
+
+				<ArrowUp opac={scrollCount}/>
 			</div>
             );
 

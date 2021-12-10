@@ -26,25 +26,24 @@ class App extends Component {
   }
 
   pageUp = () => {
-    this.setState(({scrollCount}) => {
 
-      if(document.documentElement.scrollTop >= 300 && scrollCount < 1) {
-        console.log(document.documentElement.scrollTop)
+    const {scrollTop, scrollWidth} = document.documentElement
+
+    this.setState(({scrollCount}) => {
+      if(scrollTop >= 300 && scrollCount < 1) {
         return {
-          scrollCount:  scrollCount + 0.5
+          scrollCount: scrollTop <= scrollWidth ? 1 : scrollCount + 0.25
           }
-      } else if (document.documentElement.scrollTop <= 300 && scrollCount > 0) {
-        console.log(document.documentElement.scrollTop)
-        return {
-          scrollCount: scrollCount - 0.5
-          }
+      } else if (scrollTop <= 300 && scrollCount > 0) {
+          return {
+            scrollCount: scrollTop <= 100 ? 0 : scrollCount - 0.35
+            }
       }
     })
          
   }
 
   render() {
-    console.log(document.documentElement.scrollTop);
     const {itemsOurBest, toggleState, scrollCount} = this.state;
     return (
         <div className="app" onWheel={this.pageUp} onClick={this.toggleMenu}>
