@@ -29,25 +29,26 @@ class ForYourPleasure extends Component {
 		})
 	}
 
-    pageUp = () => {
+  pageUp = () => {
 
-      const {scrollTop, scrollWidth} = document.documentElement
+    const {scrollTop, scrollHeight} = document.documentElement;
 
-      this.setState(({scrollCount}) => {
-        if(scrollTop >= 300 && scrollCount < 1) {
+    const scrollHeight25Proc = Math.round(scrollHeight / 100 * 25);
+ 
+    this.setState(({scrollCount}) => {
+      if(scrollTop >= scrollHeight25Proc && scrollCount < 1) {
+        return {
+          hidden: 1,
+          scrollCount: scrollCount + 1
+        }
+      } else if (scrollTop <= scrollHeight25Proc && scrollCount > 0) {
           return {
             hidden: 1,
-            scrollCount: scrollTop <= scrollWidth ? 1 : scrollCount + 0.25
-            }
-        } else if (scrollTop <= 300 && scrollCount > 0) {
-            return {
-              hidden: 1,
-              scrollCount: scrollTop <= 100 ? 0 : scrollCount - 0.35
-              }
-        }
-      })
-          
-    }
+            scrollCount: scrollCount - 1
+          }
+      } 
+    })       
+  }
 
     render() {
         const {gradesCoffee, toggleState, scrollCount, hidden} = this.state;
