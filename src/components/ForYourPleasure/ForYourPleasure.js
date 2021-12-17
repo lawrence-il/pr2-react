@@ -18,6 +18,7 @@ class ForYourPleasure extends Component {
             gradesCoffee: gradesCoffee,
             toggleState: 0,
             scrollCount: 0,
+            hidden: 1
         };
     }
 
@@ -30,24 +31,26 @@ class ForYourPleasure extends Component {
 
     pageUp = () => {
 
-        const {scrollTop, scrollWidth} = document.documentElement
-    
-        this.setState(({scrollCount}) => {
-          if(scrollTop >= 300 && scrollCount < 1) {
+      const {scrollTop, scrollWidth} = document.documentElement
+
+      this.setState(({scrollCount}) => {
+        if(scrollTop >= 300 && scrollCount < 1) {
+          return {
+            hidden: 1,
+            scrollCount: scrollTop <= scrollWidth ? 1 : scrollCount + 0.25
+            }
+        } else if (scrollTop <= 300 && scrollCount > 0) {
             return {
-              scrollCount: scrollTop <= scrollWidth ? 1 : scrollCount + 0.25
+              hidden: 1,
+              scrollCount: scrollTop <= 100 ? 0 : scrollCount - 0.35
               }
-          } else if (scrollTop <= 300 && scrollCount > 0) {
-              return {
-                scrollCount: scrollTop <= 100 ? 0 : scrollCount - 0.35
-                }
-          }
-        })
-             
-      }
+        }
+      })
+          
+    }
 
     render() {
-        const {gradesCoffee, toggleState, scrollCount} = this.state;
+        const {gradesCoffee, toggleState, scrollCount, hidden} = this.state;
         return (
             <div className="for-your-pleasure-page" onWheel={this.pageUp} onClick={this.toggleMenu}>
 
@@ -68,7 +71,7 @@ class ForYourPleasure extends Component {
 
                 <Footer/>
 
-                <ArrowUp opac={scrollCount}/>
+                <ArrowUp opac={scrollCount} hidden={hidden}/>
 			    </div>
 
         )

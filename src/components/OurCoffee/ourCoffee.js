@@ -23,6 +23,7 @@ class ourCoffee extends Component {
 			filter: 'All',
 			toggleState: 0,
 			scrollCount: 0,
+			hidden: 1,
 		}
     }
     
@@ -74,10 +75,12 @@ class ourCoffee extends Component {
 		this.setState(({scrollCount}) => {
 		  if(scrollTop >= 300 && scrollCount < 1) {
 			return {
+			  hidden: 1,
 			  scrollCount: scrollTop <= scrollWidth ? 1 : scrollCount + 0.25
 			  }
 		  } else if (scrollTop <= 300 && scrollCount > 0) {
 			  return {
+				hidden: 1,
 				scrollCount: scrollTop <= 100 ? 0 : scrollCount - 0.35
 				}
 		  }
@@ -86,7 +89,7 @@ class ourCoffee extends Component {
 	  }
 
     render() {
-		const {gradesCoffee, search, filter, toggleState, scrollCount} = this.state;
+		const {gradesCoffee, search, filter, toggleState, scrollCount, hidden} = this.state;
 		const visibleCoffeeCard = this.filterCoffee(this.showCoffee(gradesCoffee,search), filter)
             return (
             <div className="our-coffee-page" onWheel={this.pageUp} onClick={this.toggleMenu}>
@@ -117,7 +120,7 @@ class ourCoffee extends Component {
 				
 				<Footer/>
 
-				<ArrowUp opac={scrollCount}/>
+				<ArrowUp opac={scrollCount} hidden={hidden}/>
 			</div>
             );
 

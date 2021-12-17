@@ -16,6 +16,7 @@ class App extends Component {
       itemsOurBest: itemsOurBest,
       toggleState: 0,
       scrollCount: 0,
+      hidden: 1
     }
   }
   
@@ -33,10 +34,12 @@ class App extends Component {
     this.setState(({scrollCount}) => {
       if(scrollTop >= 300 && scrollCount < 1) {
         return {
+          hidden: 1,
           scrollCount: scrollTop <= scrollWidth ? 1 : scrollCount + 0.25
           }
       } else if (scrollTop <= 300 && scrollCount > 0) {
           return {
+            hidden: 1,
             scrollCount: scrollTop <= 100 ? 0 : scrollCount - 0.35
             }
       }
@@ -45,7 +48,7 @@ class App extends Component {
   }
 
   render() {
-    const {itemsOurBest, toggleState, scrollCount} = this.state;
+    const {itemsOurBest, toggleState, scrollCount, hidden} = this.state;
     return (
         <div className="app" onWheel={this.pageUp} onClick={this.toggleMenu}>
             <section className="promo">
@@ -63,7 +66,7 @@ class App extends Component {
             
             <Footer/>
 
-            <ArrowUp opac={scrollCount}/>
+            <ArrowUp opac={scrollCount} hidden={hidden}/>
 
         </div>
     );
