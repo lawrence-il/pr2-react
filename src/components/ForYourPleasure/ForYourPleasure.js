@@ -1,4 +1,5 @@
 import { Component } from "react/cjs/react.production.min";
+import ErrorBoundary from "../errorBoundary/ErrorBoundary";
 import gradesCoffee from '../../data';
 import Header from '../Header/Header';
 import img1 from './img/cup.png';
@@ -51,22 +52,24 @@ class ForYourPleasure extends Component {
             <div className="for-your-pleasure-page" onWheel={this.pageUp} onClick={this.toggleMenu}>
 
                 <section className="for-your-pleasure">
-                          <div className="container">
-                            <Header toggleState={toggleState}/>
-                            <h1 className="for-your-pleasure__title">
-                                For your pleasure
-                            </h1>
-                          </div>
+                    <div className="container">
+                      <Header toggleState={toggleState}/>
+                      <h1 className="for-your-pleasure__title">
+                          For your pleasure
+                      </h1>
+                    </div>
                 </section>
 
                 <AboutOurBeans classSection='about-our-goods' img1={img1} img2={img2}/>
 
-				<GradesCoffeeCards visibleCoffeeCard={gradesCoffee}/>
+                <ErrorBoundary>
+                    <GradesCoffeeCards visibleCoffeeCard={gradesCoffee}/>
+                </ErrorBoundary>
 
-				<Footer/>
+                <Footer/>
 
                 <ArrowUp opac={scrollCount}/>
-			</div>
+			    </div>
 
         )
     }

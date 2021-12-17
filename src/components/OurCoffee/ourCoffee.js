@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import ErrorBoundary from '../errorBoundary/ErrorBoundary';
 import gradesCoffee from '../../data';
 import Header from '../Header/Header';
 import img1 from "../AboutOurBeans/img/img1.png";
@@ -101,12 +102,19 @@ class ourCoffee extends Component {
 
                 <AboutOurBeans classSection='about-our-beans' img1={img1} img2={img2}/>
 
-				<GradesCoffee 
-					searchCoffee={this.searchCoffee}
-					filterUpdateState={this.filterUpdateState}
-					/>
-				<GradesCoffeeCards visibleCoffeeCard={visibleCoffeeCard}/>
+				<ErrorBoundary>
+					<GradesCoffee 
+						searchCoffee={this.searchCoffee}
+						filterUpdateState={this.filterUpdateState}
+						/>
+				</ErrorBoundary>
 
+				<ErrorBoundary>
+					<GradesCoffeeCards 
+						visibleCoffeeCard={visibleCoffeeCard}
+						/>
+				</ErrorBoundary>
+				
 				<Footer/>
 
 				<ArrowUp opac={scrollCount}/>

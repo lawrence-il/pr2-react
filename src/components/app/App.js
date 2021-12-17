@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import ErrorBoundary from '../errorBoundary/ErrorBoundary';
 import itemsOurBest from '../../data';
 import Header from '../Header/Header';
 import Promo from '../Promo/Promo';
@@ -56,7 +57,9 @@ class App extends Component {
 
             {aboutUs}
           
-            <OurBest itemsOurBest={itemsOurBest}/>
+            <ErrorBoundary>
+                <OurBest itemsOurBest={itemsOurBest}/>
+            </ErrorBoundary>
             
             <Footer/>
 
