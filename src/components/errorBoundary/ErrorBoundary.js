@@ -13,6 +13,8 @@ class ErrorBoundary extends Component {
     render() {
         if (this.state.error) {
             return <h2 style={{textAlign: "center"}}>error</h2>
+        } else if (!this.props.children) {
+            return null;
         }
 
         return this.props.children

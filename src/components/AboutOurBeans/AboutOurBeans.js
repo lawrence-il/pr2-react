@@ -19,8 +19,10 @@ const AboutOurBeans = ({classSection, img1, img2}) => {
                         {classSection === 'about-our-beans' ? 
                                                 <span>Extremity sweetness difficult behaviour he of. <br />
                                                     On disposal of as landlord horrible.
-                                                </span> 
+                                                </span>
+
                                                     :
+                                                    
                                                 <span>"Lorem ipsum dolor sit amet, 
                                                     consectetur adipiscing elit, 
                                                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

@@ -4,7 +4,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import gradesCoffee from "../../data";
 import beansHTML from "../../beans/beans";
-import '../OurCoffee/ourCoffee.sass';
+import '../OurCoffeeForYourPl/OurCoffeeForYourPl.sass';
 import './aboutIt.sass'
 
 
