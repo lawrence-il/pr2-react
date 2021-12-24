@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useLocation } from "react-router";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import gradesCoffee from "../../data";
@@ -11,9 +10,9 @@ import './aboutIt.sass'
 
 const AboutIt = ({ToggleMenu}) => {
 
-    let location = useLocation();
-    let id = +location.pathname.match(/\d+/);
 
+    let id = +window.location.pathname.match(/\d+/);
+    
     const choiceItem = gradesCoffee.filter(item => item.id === id);
     const {name, urlDetailsImg, urlDetailsImg2, desc, country, cost} = choiceItem[0];
 
