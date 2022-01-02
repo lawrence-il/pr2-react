@@ -1,15 +1,15 @@
 import { Component } from 'react';
-import ErrorBoundary from '../errorBoundary/ErrorBoundary';
-import gradesCoffee from '../../data';
-import Header from '../Header/Header';
-import img1 from "../AboutOurBeans/img/img1.png";
-import img2 from "../AboutOurBeans/img/img2.png";
-import cup from "../AboutOurBeans/img/cup.png"
-import cup2 from "../AboutOurBeans/img/cup2.png"
-import AboutOurBeans from '../AboutOurBeans/AboutOurBeans';
-import GradesCoffeeCards from '../GradesCoffeeCards/GradesCoffeeCards'
-import Footer from '../Footer/Footer';
-import ArrowUp from '../ArrowUp/ArrowUp';
+import ErrorBoundary from '../../ErrorBoundary/ErrorBoundary';
+import gradesCoffee from '../../../data';
+import Header from '../../Header/Header';
+import img1 from "../../AboutOurBeans/img/img1.png";
+import img2 from "../../AboutOurBeans/img/img2.png";
+import cup from "../../AboutOurBeans/img/cup.png"
+import cup2 from "../../AboutOurBeans/img/cup2.png"
+import AboutOurBeans from '../../AboutOurBeans/AboutOurBeans';
+import GradesCoffeeCards from '../../GradesCoffeeCards/GradesCoffeeCards'
+import Footer from '../../Footer/Footer';
+import ArrowUp from '../../ArrowUp/ArrowUp';
 
 
 import './OurCoffeeForYourPl.sass';

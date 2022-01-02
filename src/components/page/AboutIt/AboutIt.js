@@ -1,30 +1,28 @@
 import { useState } from 'react';
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
-import gradesCoffee from "../../data";
-import beansHTML from "../../beans/beans";
-import '../OurCoffeeForYourPl/OurCoffeeForYourPl.sass';
+import { useParams } from 'react-router-dom';
+import Header from "../../Header/Header";
+import Footer from "../../Footer/Footer";
+import gradesCoffee from "../../../data";
+import beansHTML from "../../../beans/beans";
+import '../OurCoffeeForYourPl/OurCoffeeForYourPl';
 import './aboutIt.sass'
-
 
 
 const AboutIt = ({ToggleMenu}) => {
 
-
-    let id = +window.location.pathname.match(/\d+/);
-    
-    const choiceItem = gradesCoffee.filter(item => item.id === id);
-    const {name, urlDetailsImg, urlDetailsImg2, desc, country, cost} = choiceItem[0];
-
     let [toggleState, setToggleState] = useState(0);
+
+    let {id} = useParams();
+    const choiceItem = gradesCoffee.filter(item => item.id === +id);
+    const {name, urlDetailsImg, urlDetailsImg2, desc, country, cost} = choiceItem[0];
 
     const toggleMenu = (e) => {
 		let toggleStateMenu = ToggleMenu(e, toggleState);
 		setToggleState(toggleStateMenu);
 	  }
     
-    return <div className="our-coffee-page" onClick={toggleMenu}>
-
+    return (
+    <div className="our-coffee-page" onClick={toggleMenu}>
         <section className="our-coffee">
                     <div className="container">
                     <Header toggleState={toggleState}/>
@@ -61,10 +59,9 @@ const AboutIt = ({ToggleMenu}) => {
                 </div>
             </div>
         </section>
-
-
         <Footer/>
     </div>
+    )
 }
 
 export default AboutIt;
