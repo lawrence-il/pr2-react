@@ -23,7 +23,7 @@ const App = () => {
                 }
                 ToggleMenu={ToggleMenu}/>}/>
           <Route path="ourCoffee/about-it/:id" element={<AboutIt ToggleMenu={ToggleMenu}/>}></Route>
-          <Route path="ForYourPleasure" element={<OurCoffeeForYourPl render={() => {}} ToggleMenu={ToggleMenu}/> }></Route>
+          <Route path="ForYourPleasure" element={<OurCoffeeForYourPl render={() => null} ToggleMenu={ToggleMenu}/> }></Route>
         </Routes>
       </BrowserRouter>
     );

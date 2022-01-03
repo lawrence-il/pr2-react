@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { useState } from 'react';
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 import itemsOurBest from '../../data';
 import Header from '../Header/Header';
@@ -9,49 +9,34 @@ import Footer from '../Footer/Footer';
 import ArrowUp from '../ArrowUp/ArrowUp';
 
 
-class CoffeeHouse extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      itemsOurBest: itemsOurBest,
-      toggleState: 0,
-      scrollCount: 0,
-      hidden: 1
-    }
-  }
+const CoffeeHouse = (props) => {
+
+    const [toggleState, setToggleState] = useState(0);
+    const [scrollCount, setScrollCount] = useState(0);
   
-  toggleMenu = (e) => {
-    const toggleState = this.props.ToggleMenu(e, this.state.toggleState);
-    this.setState({
-      toggleState: toggleState
-    })
-  }
+    const toggleMenu = (e) => {
+		setToggleState((toggleState) => props.ToggleMenu(e, toggleState))
+	}
 
-  pageUp = () => {
+    const pageUp = () => {
 
-    const {scrollTop, scrollHeight} = document.documentElement;
+        const {scrollTop, scrollHeight} = document.documentElement;
 
-    const scrollHeight25Proc = Math.round(scrollHeight / 100 * 25);
- 
-    this.setState(({scrollCount}) => {
-      if(scrollTop >= scrollHeight25Proc && scrollCount < 1) {
-        return {
-          hidden: 1,
-          scrollCount: scrollCount + 1
+        const scrollHeight25Proc = Math.round(scrollHeight / 100 * 25);
+    
+        if(scrollTop >= scrollHeight25Proc && scrollCount < 1) {
+            
+                setScrollCount(scrollCount => scrollCount + 1);
+        }else if (scrollTop <= scrollHeight25Proc && scrollCount > 0) {
+                
+                setScrollCount(scrollCount => scrollCount - 1);
         }
-      } else if (scrollTop <= scrollHeight25Proc && scrollCount > 0) {
-          return {
-            hidden: 1,
-            scrollCount: scrollCount - 1
-          }
-      } 
-    })       
-  }
 
-  render() {
-    const {itemsOurBest, toggleState, scrollCount, hidden} = this.state;
+
+    }
+
     return (
-        <div className="app" onWheel={this.pageUp} onClick={this.toggleMenu}>
+        <div className="app" onWheel={pageUp} onClick={toggleMenu}>
             <section className="promo">
                 <div className="container">
                     <Header toggleState={toggleState}/>
@@ -67,12 +52,10 @@ class CoffeeHouse extends Component {
             
             <Footer/>
 
-            <ArrowUp opac={scrollCount} hidden={hidden}/>
+            <ArrowUp opac={scrollCount}/>
 
         </div>
     );
   }
-  
-}
 
 export default CoffeeHouse;
