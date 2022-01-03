@@ -2,7 +2,7 @@ import { useState } from 'react';
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 import itemsOurBest from '../../data';
 import Header from '../Header/Header';
-import Promo from '../promo/promo';
+import promo from '../promo/promo';
 import aboutUs from '../aboutUs/aboutUs';
 import OurBest from '../OurBest/OurBest';
 import Footer from '../Footer/Footer';
@@ -40,7 +40,7 @@ const CoffeeHouse = (props) => {
             <section className="promo">
                 <div className="container">
                     <Header toggleState={toggleState}/>
-                    <Promo/>
+                    {promo}
                 </div>
             </section>
 

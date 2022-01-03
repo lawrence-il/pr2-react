@@ -1,31 +1,24 @@
-import { Component } from 'react';
+import { useState } from "react";
+
+const SearchPanel = (props) => {
 
 
-class SearchPanel extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            search: '',
-        };
-    }
+    const [search, setSearch] = useState(''),
 
     searchCoffee = (e) => {
-        this.setState({
-            search: e.target.value
-        });
-        this.props.searchCoffee(e.target.value);
+        setSearch(e.target.value);
+        props.searchCoffee(e.target.value);
 	}
 
-    render() {
+
         return (
             <input 
                 type="text" 
                 className="grades-coffee__input"
                 placeholder="start typing here..."
-                onChange={this.searchCoffee}
-                value={this.search} />
+                onChange={searchCoffee}
+                value={search} />
         )
     }
-}
 
 export default SearchPanel;

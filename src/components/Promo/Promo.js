@@ -2,8 +2,7 @@ import './promo.sass';
 import '../../sass/beans.sass';
 import beans from '../../components/beans/img/beans.svg'
 
-const promo = () => {
-    return (
+const promo = (
             
         <div className="promo__wrapper">
             <h1 className="promo__title">Everything You Love About Coffee</h1>
@@ -20,6 +19,5 @@ const promo = () => {
         </div>
 
     )
-}
 
 export default promo;
