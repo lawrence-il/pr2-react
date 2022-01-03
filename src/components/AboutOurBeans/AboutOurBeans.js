@@ -1,4 +1,4 @@
-import beansHTML from '../../beans/beans';
+import beansHTML from '../beans/beans';
 import './aboutOurBeans.sass';
 
 

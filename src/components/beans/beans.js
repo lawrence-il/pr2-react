@@ -1,5 +1,5 @@
 import beans from './img/beans.svg';
-import '../sass/beans.sass';
+import '../../sass/beans.sass';
 
 const beansHTML = <div className="beans__wrapper-beans">
                     <div className="beans__line"></div>

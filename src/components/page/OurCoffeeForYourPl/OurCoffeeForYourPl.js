@@ -65,10 +65,8 @@ const OurCoffee = (props) => {
 		const scrollHeight25Proc = Math.round(scrollHeight / 100 * 25);
 	 
 		  if(scrollTop >= scrollHeight25Proc && scrollCount < 1) {
-			  
 				setScrollCount(scrollCount => scrollCount + 1);
 		  }else if (scrollTop <= scrollHeight25Proc && scrollCount > 0) {
-				
 				setScrollCount(scrollCount => scrollCount - 1);
 		}
  

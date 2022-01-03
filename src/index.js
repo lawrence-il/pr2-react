@@ -1,8 +1,8 @@
 import ReactDOM from 'react-dom';
-import './index.sass';
+import './sass/index.sass';
 import './sass/text-h2.sass';
-import App from './components/app/App';
-import './media-index.sass';
+import App from './components/App/App';
+import './sass/media-index.sass';
 
 
 
