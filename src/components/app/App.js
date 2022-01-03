@@ -14,18 +14,18 @@ const App = () => {
         <Suspense fallback={<span style={{margin: '0 auto'}}>Loading...</span>}>
 			<Routes>
 				<Route path="/" element={<CoffeeHouse ToggleMenu={ToggleMenu}/>}/> 
-			<Route path="ourCoffee" element={<OurCoffeeForYourPl
-				render={
-					(searchCoffee, filterUpdateState) => (
-					<GradesCoffee 
-						searchCoffee={searchCoffee}
-						filterUpdateState={filterUpdateState}
-						/>
-					)
-					}
-					ToggleMenu={ToggleMenu}/>}/>
-			<Route path="ourCoffee/about-it/:id" element={<AboutIt ToggleMenu={ToggleMenu}/>}></Route>
-			<Route path="ForYourPleasure" element={<OurCoffeeForYourPl render={() => null} ToggleMenu={ToggleMenu}/> }></Route>
+				<Route path="ourCoffee" element={<OurCoffeeForYourPl
+					render={
+						(searchCoffee, filterUpdateState) => (
+						<GradesCoffee 
+							searchCoffee={searchCoffee}
+							filterUpdateState={filterUpdateState}
+							/>
+						)
+						}
+						ToggleMenu={ToggleMenu}/>}/>
+				<Route path="ourCoffee/about-it/:id" element={<AboutIt ToggleMenu={ToggleMenu}/>}></Route>
+				<Route path="ForYourPleasure" element={<OurCoffeeForYourPl render={() => null} ToggleMenu={ToggleMenu}/> }></Route>
 			</Routes>
 		</Suspense>
       </BrowserRouter>
