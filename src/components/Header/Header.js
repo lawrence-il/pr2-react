@@ -4,8 +4,8 @@ import './header.sass';
 const Header = ({toggleState, footer = false}) => {
     const menuHeader = [
         {text: 'Coffee house', url: '/', id: 1},
-        {text: 'Our coffee', url: '/ourCoffee', id: 2},
-        {text: 'For your pleasure', url: '/ForYourPleasure ', id: 3},
+        {text: 'Our coffee', url: '/ourCoffee/', id: 2},
+        {text: 'For your pleasure', url: '/ForYourPleasure/', id: 3},
       ];
     const centerHeader = footer ? 'header_center' : '',
         humburgerHeader = footer ? 'header__humburger_footer' : '',

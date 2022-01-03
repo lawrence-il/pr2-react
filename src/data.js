@@ -1,8 +1,8 @@
 const data = [
     {
         name: 'AROMISTICO Coffee 1kg', 
-        urlImgX1: "./img/AROMISTICOCoffeeX1.png", 
-        urlImgX2: './img/AROMISTICOCoffeeX2.png', 
+        urlImgX1: `${process.env.PUBLIC_URL}/img/AROMISTICOCoffeeX1.png`, 
+        urlImgX2: `${process.env.PUBLIC_URL}/img/AROMISTICOCoffeeX2.png`, 
         urlDetailsImg: './img/details-img.png',
         urlDetailsImg2: './img/details-img2.png',
         country: 'Brazil', 
@@ -14,8 +14,8 @@ const data = [
 },
     {
         name: 'Presto Coffee Beans 1kg', 
-        urlImgX1: "./img/PrestoCoffeeBeansX1.png", 
-        urlImgX2: './img/PrestoCoffeeBeansX2.png', 
+        urlImgX1: `${process.env.PUBLIC_URL}/img/PrestoCoffeeBeansX1.png`, 
+        urlImgX2: `${process.env.PUBLIC_URL}/img/PrestoCoffeeBeansX2.png`, 
         urlDetailsImg: './img/details-img.png',
         urlDetailsImg2: './img/details-img2.png',
         country: 'Kenya', 
@@ -27,8 +27,8 @@ const data = [
 },
     {
         name: 'Solimo Coffee Beans 2kg', 
-        urlImgX1: "./img/SolimoCoffeeBeansX1.png", 
-        urlImgX2: './img/SolimoCoffeeBeansX2.png', 
+        urlImgX1: `${process.env.PUBLIC_URL}/img/SolimoCoffeeBeansX1.png`, 
+        urlImgX2: `${process.env.PUBLIC_URL}/img/SolimoCoffeeBeansX2.png`, 
         urlDetailsImg: './img/details-img.png',
         urlDetailsImg2: './img/details-img2.png',
         country: 'Columbia', 
@@ -40,8 +40,8 @@ const data = [
 },
     {
         name: 'AROMISTICO Coffee 1kg', 
-        urlImgX1: "./img/AROMISTICOCoffeeX1.png", 
-        urlImgX2: './img/AROMISTICOCoffeeX2.png', 
+        urlImgX1: `${process.env.PUBLIC_URL}/img/AROMISTICOCoffeeX1.png`, 
+        urlImgX2: `${process.env.PUBLIC_URL}/img/AROMISTICOCoffeeX2.png`, 
         urlDetailsImg: './img/details-img.png',
         urlDetailsImg2: './img/details-img2.png',
         country: 'Brazil', 
@@ -53,8 +53,8 @@ const data = [
 },
     {
         name: 'Solimo Coffee Beans 2kg', 
-        urlImgX1: "./img/SolimoCoffeeBeansX1.png", 
-        urlImgX2: './img/SolimoCoffeeBeansX2.png', 
+        urlImgX1: `${process.env.PUBLIC_URL}/img/SolimoCoffeeBeansX1.png`, 
+        urlImgX2: `${process.env.PUBLIC_URL}/img/SolimoCoffeeBeansX2.png`, 
         urlDetailsImg: './img/details-img.png',
         urlDetailsImg2: './img/details-img2.png',
         country: 'Columbia', 
@@ -66,8 +66,8 @@ const data = [
 },
     {
         name: 'Presto Coffee Beans 2kg', 
-        urlImgX1: "./img/PrestoCoffeeBeansX1.png", 
-        urlImgX2: './img/PrestoCoffeeBeansX2.png', 
+        urlImgX1: `${process.env.PUBLIC_URL}/img/PrestoCoffeeBeansX1.png`, 
+        urlImgX2: `${process.env.PUBLIC_URL}/img/PrestoCoffeeBeansX2.png`, 
         urlDetailsImg: './img/details-img.png',
         urlDetailsImg2: './img/details-img2.png',
         country: 'Kenya', 

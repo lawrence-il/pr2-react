@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useLocation} from 'react-router-dom';
 import ErrorBoundary from '../../ErrorBoundary/ErrorBoundary';
 import gradesCoffee from '../../../data';
 import Header from '../../Header/Header';
@@ -17,12 +18,13 @@ import './OurCoffeeForYourPl.sass';
 
 const OurCoffee = (props) => {
 
-
+	
 	const [gradesCof, setGradesCoffee] = useState(gradesCoffee);
 	const [search, setSearch] = useState('');
 	const [filter, setFilter] = useState('All');
 	const [toggleState, setToggleState] = useState(0);
 	const [scrollCount, setScrollCount] = useState(0);
+	const location = useLocation();
 
 	const showCoffee = (gradesCof, search) => {
 		if(search.length === 0) {
@@ -73,28 +75,27 @@ const OurCoffee = (props) => {
     
 	}
 
-		const {pathname} = window.location;
-
+		const {pathname} = location;
 		const visibleCoffeeCard = filterCoffee(showCoffee(gradesCof, search), filter);
 
 		return (
-			<div className={pathname === '/ourCoffee' ? "our-coffee-page" : "for-your-pleasure-page"} 
+			<div className={pathname === '/ourCoffee/' ? "our-coffee-page" : "for-your-pleasure-page"} 
 				onWheel={pageUp} 
 				onClick={toggleMenu}
 				>
 
-				<section className={pathname === '/ourCoffee' ? "our-coffee" : "for-your-pleasure"} >
+				<section className={pathname === '/ourCoffee/' ? "our-coffee" : "for-your-pleasure"} >
 							<div className="container">
 							<Header toggleState={toggleState}/>
-							<h1 className={pathname === '/ourCoffee' ? "our-coffee__title" : "for-your-pleasure__title"}>
-								{pathname === '/ourCoffee' ? 'Our Coffee' : 'For your pleasure'}
+							<h1 className={pathname === '/ourCoffee/' ? "our-coffee__title" : "for-your-pleasure__title"}>
+								{pathname === '/ourCoffee/' ? 'Our Coffee' : 'For your pleasure'}
 							</h1>
 							</div>
 				</section>
 
 				<AboutOurBeans classSection={pathname === '/ourCoffee' ? 'about-our-beans' : 'about-our-goods'} 
-					img1={pathname === '/ourCoffee' ? img1 : cup} 
-					img2={pathname === '/ourCoffee' ? img2 : cup2}
+					img1={pathname === '/ourCoffee/' ? img1 : cup} 
+					img2={pathname === '/ourCoffee/' ? img2 : cup2}
 						/>
 
 				<ErrorBoundary>
@@ -103,7 +104,7 @@ const OurCoffee = (props) => {
 
 				<ErrorBoundary>
 					<GradesCoffeeCards 
-						visibleCoffeeCard={visibleCoffeeCard}
+						visibleCoffeeCard={pathname === '/ourCoffee/' ? visibleCoffeeCard : gradesCof}
 						/>
 				</ErrorBoundary>
 				
