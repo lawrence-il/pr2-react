@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { useState } from 'react';
 import ErrorBoundary from '../../ErrorBoundary/ErrorBoundary';
 import gradesCoffee from '../../../data';
 import Header from '../../Header/Header';
@@ -15,40 +15,32 @@ import ArrowUp from '../../ArrowUp/ArrowUp';
 import './OurCoffeeForYourPl.sass';
 
 
-class ourCoffee extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-			gradesCoffee: gradesCoffee,
-			search: '',
-			filter: 'All',
-			toggleState: 0,
-			scrollCount: 0,
-			hidden: 1,
-		}
-    }
+const OurCoffee = (props) => {
 
-	showCoffee = (gradesCoffee, search) => {
+
+	const [gradesCof, setGradesCoffee] = useState(gradesCoffee);
+	const [search, setSearch] = useState('');
+	const [filter, setFilter] = useState('All');
+	const [toggleState, setToggleState] = useState(0);
+	const [scrollCount, setScrollCount] = useState(0);
+
+	const showCoffee = (gradesCof, search) => {
 		if(search.length === 0) {
-			return gradesCoffee
+			return gradesCof
 		}
 		
-		return gradesCoffee.filter(item => item.name.indexOf(search) > -1)
+		return gradesCof.filter(item => item.name.indexOf(search) > -1)
 	}
 
-	searchCoffee = (searchValue) => { // приходит значение из input
-		this.setState({
-			search: searchValue
-		})	
+	const searchCoffee = (searchValue) => { // приходит значение из input
+		setSearch(searchValue)	
 	}
 
-	filterUpdateState = (filterValue) => { // значение фильтра
-		this.setState({
-			filter: this.state.filter === filterValue ? 'All' : filterValue
-		})
+	const filterUpdateState = (filterValue) => { // значение фильтра
+		setFilter(filter === filterValue ? 'All' : filterValue)
 	}
 
-	filterCoffee = (data, filter) => {
+	const filterCoffee = (data, filter) => {
 		switch(filter) { 
 			case 'Brazil':
 				return data.filter(item => item.country === 'Brazil');
@@ -61,63 +53,54 @@ class ourCoffee extends Component {
 		}
 	}
 
-	toggleMenu = (e) => {
-		const toggleState = this.props.ToggleMenu(e, this.state.toggleState);
-		this.setState({
-		  toggleState: toggleState
-		})
+	const toggleMenu = (e) => {
+		setToggleState((toggleState) => props.ToggleMenu(e, toggleState))
 	}
 
 
-	pageUp = () => {
+	const pageUp = () => {
 
 		const {scrollTop, scrollHeight} = document.documentElement;
 	
 		const scrollHeight25Proc = Math.round(scrollHeight / 100 * 25);
 	 
-		this.setState(({scrollCount}) => {
 		  if(scrollTop >= scrollHeight25Proc && scrollCount < 1) {
-			return {
-			  hidden: 1,
-			  scrollCount: scrollCount + 1
-			}
-		  } else if (scrollTop <= scrollHeight25Proc && scrollCount > 0) {
-			  return {
-				hidden: 1,
-				scrollCount: scrollCount - 1
-			  }
-		  } 
-		})       
-	  }
+			  
+				setScrollCount(scrollCount => scrollCount + 1);
+		  }else if (scrollTop <= scrollHeight25Proc && scrollCount > 0) {
+				
+				setScrollCount(scrollCount => scrollCount - 1);
+		}
+ 
+    
+	}
 
-    render() {
-		const {pathname} = window.location
+		const {pathname} = window.location;
 
-		const {gradesCoffee, search, filter, toggleState, scrollCount, hidden} = this.state;
-		const visibleCoffeeCard = this.filterCoffee(this.showCoffee(gradesCoffee, search), filter)
+		const visibleCoffeeCard = filterCoffee(showCoffee(gradesCof, search), filter);
 
-            return (
-            <div className={pathname === '/ourCoffee' ? "our-coffee-page" : "for-your-pleasure-page"} 
-				onWheel={this.pageUp} 
-				onClick={this.toggleMenu}
+		return (
+			<div className={pathname === '/ourCoffee' ? "our-coffee-page" : "for-your-pleasure-page"} 
+				onWheel={pageUp} 
+				onClick={toggleMenu}
 				>
 
-                <section className={pathname === '/ourCoffee' ? "our-coffee" : "for-your-pleasure"} >
-                          <div className="container">
-                            <Header toggleState={toggleState}/>
-                            <h1 className={pathname === '/ourCoffee' ? "our-coffee__title" : "for-your-pleasure__title"}>
-                              {pathname === '/ourCoffee' ? 'Our Coffee' : 'For your pleasure'}
-                            </h1>
-                          </div>
-                </section>
+				<section className={pathname === '/ourCoffee' ? "our-coffee" : "for-your-pleasure"} >
+							<div className="container">
+							<Header toggleState={toggleState}/>
+							<h1 className={pathname === '/ourCoffee' ? "our-coffee__title" : "for-your-pleasure__title"}>
+								{pathname === '/ourCoffee' ? 'Our Coffee' : 'For your pleasure'}
+							</h1>
+							</div>
+				</section>
 
-                <AboutOurBeans classSection={pathname === '/ourCoffee' ? 'about-our-beans' : 'about-our-goods'} 
+				<AboutOurBeans classSection={pathname === '/ourCoffee' ? 'about-our-beans' : 'about-our-goods'} 
 					img1={pathname === '/ourCoffee' ? img1 : cup} 
 					img2={pathname === '/ourCoffee' ? img2 : cup2}
 						/>
 
 				<ErrorBoundary>
-					{this.props.render(this.searchCoffee, this.filterUpdateState)}
+					{props.render(searchCoffee, filterUpdateState)}
 				</ErrorBoundary>
 
 				<ErrorBoundary>
@@ -128,11 +111,11 @@ class ourCoffee extends Component {
 				
 				<Footer/>
 
-				<ArrowUp opac={scrollCount} hidden={hidden}/>
+				<ArrowUp opac={scrollCount}/>
 			</div>
-            );
+		);
 
     }
-}
 
-export default ourCoffee;
+
+export default OurCoffee;
