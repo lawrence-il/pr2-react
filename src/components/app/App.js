@@ -1,4 +1,3 @@
-import { Component } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AboutIt, CoffeeHouse, OurCoffeeForYourPl } from '../page';
 import GradesCoffee from '../GradesCoffee/GradesCoffee';
@@ -6,9 +5,9 @@ import ToggleMenu from '../ToogleMenu/ToggleMenu';
 
 
 
-class App extends Component {
+const App = () => {
   
-  render() {
+
     return (
       <BrowserRouter>
         <Routes>
@@ -28,7 +27,6 @@ class App extends Component {
         </Routes>
       </BrowserRouter>
     );
-  }
   
 }
 
