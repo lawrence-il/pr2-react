@@ -11,7 +11,7 @@
         justify-content: space-between
         padding: 37px 25px 22px
         width: 220px
-        min-height: 260px
+        height: 260px
         border: none
         border-radius: 8px
         background: #fff
@@ -42,3 +42,28 @@
         text-align: right
     &__cost
         font-weight: 700
+
+.grades-coffee__cards-enter 
+    opacity: 0
+    transform: scale(0.9)
+
+.grades-coffee__cards-enter-active 
+    opacity: 1
+    transform: scale(1)
+    transition: all 400ms
+
+.grades-coffee__cards-exit 
+    opacity: 1
+    transform: scale(1)
+
+.grades-coffee__cards-exit-active 
+    opacity: 0
+    transform: scale(0.9)
+    transition: all 400ms
+
+.grades-coffee__cards-exit-done
+    opacity: 0
+    transform: scale(0.9)
+.grades-coffee__cards-enter-done 
+    opacity: 1
+    transform: scale(1)

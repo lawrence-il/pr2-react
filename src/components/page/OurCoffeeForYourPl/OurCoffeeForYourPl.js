@@ -18,7 +18,7 @@ import './OurCoffeeForYourPl.sass';
 
 const OurCoffee = (props) => {
 
-	
+
 	const [gradesCof, setGradesCoffee] = useState(gradesCoffee);
 	const [search, setSearch] = useState('');
 	const [filter, setFilter] = useState('All');
@@ -71,8 +71,7 @@ const OurCoffee = (props) => {
 		  }else if (scrollTop <= scrollHeight25Proc && scrollCount > 0) {
 				setScrollCount(scrollCount => scrollCount - 1);
 		}
- 
-    
+
 	}
 
 		const {pathname} = location;
