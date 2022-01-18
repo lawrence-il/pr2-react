@@ -1,10 +1,11 @@
 import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { AboutIt,  OurCoffeeForYourPl } from '../page';
+import { AboutIt } from '../page';
 import GradesCoffee from '../GradesCoffee/GradesCoffee';
 import ToggleMenu from '../ToogleMenu/ToggleMenu';
-const CoffeeHouse = lazy(() => import('../page/CoffeeHouse'));
 
+const CoffeeHouse = lazy(() => import('../page/CoffeeHouse'));
+const OurCoffeeForYourPl = lazy(() => import('../page/OurCoffeeForYourPl/OurCoffeeForYourPl'))
 
 const App = () => {
   
@@ -25,7 +26,7 @@ const App = () => {
 						}
 						ToggleMenu={ToggleMenu}/>}/>
 				<Route path="ourCoffee/about-it/:id" element={<AboutIt ToggleMenu={ToggleMenu}/>}></Route>
-				<Route path="ForYourPleasure" element={<OurCoffeeForYourPl render={() => null} ToggleMenu={ToggleMenu}/> }></Route>
+				<Route path="ForYourPleasure" element={<OurCoffeeForYourPl render={() => null} ToggleMenu={ToggleMenu}/>}></Route>
 			</Routes>
 		</Suspense>
       </BrowserRouter>

@@ -10,7 +10,7 @@ import cup2 from "../../AboutOurBeans/img/cup2.png"
 import AboutOurBeans from '../../AboutOurBeans/AboutOurBeans';
 import GradesCoffeeCards from '../../GradesCoffeeCards/GradesCoffeeCards'
 import Footer from '../../Footer/Footer';
-import ArrowUp from '../../ArrowUp/ArrowUp';
+import useArrowUp from '../../hooks/useArrowUp/useArrowUp';
 
 
 import './OurCoffeeForYourPl.sass';
@@ -23,8 +23,9 @@ const OurCoffee = (props) => {
 	const [search, setSearch] = useState('');
 	const [filter, setFilter] = useState('All');
 	const [toggleState, setToggleState] = useState(0);
-	const [scrollCount, setScrollCount] = useState(0);
 	const location = useLocation();
+
+	const {pageUp, view} = useArrowUp();
 
 	const showCoffee = (gradesCof, search) => {
 		if(search.length === 0) {
@@ -60,19 +61,6 @@ const OurCoffee = (props) => {
 	}
 
 
-	const pageUp = () => {
-
-		const {scrollTop, scrollHeight} = document.documentElement;
-	
-		const scrollHeight25Proc = Math.round(scrollHeight / 100 * 25);
-	 
-		  if(scrollTop >= scrollHeight25Proc && scrollCount < 1) {
-				setScrollCount(scrollCount => scrollCount + 1);
-		  }else if (scrollTop <= scrollHeight25Proc && scrollCount > 0) {
-				setScrollCount(scrollCount => scrollCount - 1);
-		}
-
-	}
 
 		const {pathname} = location;
 		const visibleCoffeeCard = filterCoffee(showCoffee(gradesCof, search), filter);
@@ -109,7 +97,7 @@ const OurCoffee = (props) => {
 				
 				<Footer/>
 
-				<ArrowUp opac={scrollCount}/>
+				{view}
 			</div>
 		);
 

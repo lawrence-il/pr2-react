@@ -6,34 +6,17 @@ import promo from '../promo/promo';
 import aboutUs from '../aboutUs/aboutUs';
 import OurBest from '../OurBest/OurBest';
 import Footer from '../Footer/Footer';
-import ArrowUp from '../ArrowUp/ArrowUp';
+import useArrowUp from '../hooks/useArrowUp/useArrowUp';
 
 
 const CoffeeHouse = (props) => {
 
     const [toggleState, setToggleState] = useState(0);
-    const [scrollCount, setScrollCount] = useState(0);
+    const {pageUp, view} = useArrowUp();
   
     const toggleMenu = (e) => {
 		setToggleState((toggleState) => props.ToggleMenu(e, toggleState))
 	}
-
-    const pageUp = () => {
-
-        const {scrollTop, scrollHeight} = document.documentElement;
-
-        const scrollHeight25Proc = Math.round(scrollHeight / 100 * 25);
-    
-        if(scrollTop >= scrollHeight25Proc && scrollCount < 1) {
-            
-                setScrollCount(scrollCount => scrollCount + 1);
-        }else if (scrollTop <= scrollHeight25Proc && scrollCount > 0) {
-                
-                setScrollCount(scrollCount => scrollCount - 1);
-        }
-
-
-    }
 
     return (
         <div className="app" onWheel={pageUp} onClick={toggleMenu}>
@@ -52,7 +35,7 @@ const CoffeeHouse = (props) => {
             
             <Footer/>
 
-            <ArrowUp opac={scrollCount}/>
+            {view}
 
         </div>
     );
