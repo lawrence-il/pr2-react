@@ -1,21 +1,22 @@
 import cup from "../../AboutOurBeans/img/cup.png";
 import cup2 from "../../AboutOurBeans/img/cup2.png";
 import AboutOurBeans from '../../AboutOurBeans/AboutOurBeans';
-import GradesCoffeeCards from '../../GradesCoffee/GradesCoffee';
+import GradesCoffeeCards from '../../GradesCoffeeCards/GradesCoffeeCards';
 import ErrorBoundary from '../../ErrorBoundary/ErrorBoundary';
 import Header from '../../Header/Header';
 import Footer from '../../Footer/Footer';
-import GradesCoffee from '../../GradesCoffee/GradesCoffee';
+
 
 const ForYourPleasureLayout = ({toggleState, searchCoffee, filterUpdateState, visibleCoffeeCard}) => {
 
     return (
 		<>
-			<section className={"our-coffee"}>
+
+			<section className={"for-your-pleasure"}>
 						<div className="container">
 						<Header toggleState={toggleState}/>
-						<h1 className={"our-coffee__title"}>
-							{'Our Coffee'}
+						<h1 className={"for-your-pleasure__title"}>
+							{'For your pleasure'}
 						</h1>
 						</div>
 			</section>
