@@ -5,7 +5,7 @@ import GradesCoffee from '../GradesCoffee/GradesCoffee';
 import ToggleMenu from '../ToogleMenu/ToggleMenu';
 
 const CoffeeHouse = lazy(() => import('../page/CoffeeHouse'));
-const OurCoffeeForYourPl = lazy(() => import('../page/OurCoffeeForYourPl/OurCoffeeForYourPl'))
+const OurCoffeeForYourPl = lazy(() => import('../page/ProductsPage'))
 
 const App = () => {
   

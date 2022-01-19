@@ -28,13 +28,13 @@ const useArrowUp = () => {
         setHidden(0)
     }
    
-    const view =
+    const arrowUp =
         <div className="arrow-up" onClick={clickArrow} style={hidden ? {opacity: `${scrollCount}`} : {opacity: 0}}>
             <img src={arrow} alt="arrow up" className="arrow-up__img" />
         </div>
     
 
-    return {pageUp, view}
+    return {pageUp, arrowUp}
         
 }
 
