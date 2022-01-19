@@ -1,5 +1,5 @@
 import AboutIt from './AboutIt/AboutIt';
-import OurCoffeeForYourPl from './ProductsPage';
+import  {OurCoffeeLayoutWithLayout, ForYourPleasureLayoutWithLayout} from './ProductsPage/ProductsPage';
 import CoffeeHouse from './CoffeeHouse';
 
-export {AboutIt, OurCoffeeForYourPl, CoffeeHouse};
+export {AboutIt, OurCoffeeLayoutWithLayout, ForYourPleasureLayoutWithLayout, CoffeeHouse};

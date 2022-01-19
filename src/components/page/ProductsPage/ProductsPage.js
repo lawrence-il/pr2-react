@@ -3,8 +3,9 @@ import { useLocation} from 'react-router-dom';
 import gradesCoffee from '../../../data';
 import useArrowUp from '../../hooks/useArrowUp/useArrowUp';
 import OurCoffeeLayout from '../OurCoffeeLayout/OurCoffeeLayout';
+import ForYourPleasureLayout from '../ForYourPleasureLayout/ForYourPleasureLayout';
 
-import './Layout.sass';
+import './ProductsPage.sass';
 
 const withLayout = Component => props => {
 
@@ -62,10 +63,12 @@ const withLayout = Component => props => {
 						searchCoffee={searchCoffee} 
 						filterUpdateState={filterUpdateState} 
 						visibleCoffeeCard={visibleCoffeeCard}/>
+			{arrowUp}
 		</div>
 	)
 }
 
 const OurCoffeeLayoutWithLayout = withLayout(OurCoffeeLayout);
+const ForYourPleasureLayoutWithLayout = withLayout(ForYourPleasureLayout); 
 
-export  {OurCoffeeLayoutWithLayout};
+export  {OurCoffeeLayoutWithLayout, ForYourPleasureLayoutWithLayout};

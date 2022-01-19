@@ -5,7 +5,7 @@ import GradesCoffeeCards from '../../GradesCoffeeCards/GradesCoffeeCards';
 import ErrorBoundary from '../../ErrorBoundary/ErrorBoundary';
 import Header from '../../Header/Header';
 import Footer from '../../Footer/Footer';
-import GradesCoffee from '../GradesCoffee/GradesCoffee';
+import GradesCoffee from '../../GradesCoffee/GradesCoffee';
 
 const OurCoffeeLayout = ({toggleState, searchCoffee, filterUpdateState, visibleCoffeeCard}) => {
 

@@ -1,11 +1,11 @@
 import cup from "../../AboutOurBeans/img/cup.png";
 import cup2 from "../../AboutOurBeans/img/cup2.png";
 import AboutOurBeans from '../../AboutOurBeans/AboutOurBeans';
-import GradesCoffeeCards from '../../GradesCoffeeCards/GradesCoffeeCards';
+import GradesCoffeeCards from '../../GradesCoffee/GradesCoffee';
 import ErrorBoundary from '../../ErrorBoundary/ErrorBoundary';
 import Header from '../../Header/Header';
 import Footer from '../../Footer/Footer';
-import GradesCoffee from '../GradesCoffee/GradesCoffee';
+import GradesCoffee from '../../GradesCoffee/GradesCoffee';
 
 const ForYourPleasureLayout = ({toggleState, searchCoffee, filterUpdateState, visibleCoffeeCard}) => {
 
@@ -21,13 +21,9 @@ const ForYourPleasureLayout = ({toggleState, searchCoffee, filterUpdateState, vi
 			</section>
 
 			<AboutOurBeans classSection={'about-our-beans'} 
-				img1={img1} 
-				img2={img2}
+				img1={cup} 
+				img2={cup2}
 					/>
-
-			<ErrorBoundary>
-                <GradesCoffee/>
-			</ErrorBoundary>
 
 			<ErrorBoundary>
 				<GradesCoffeeCards 
@@ -40,4 +36,4 @@ const ForYourPleasureLayout = ({toggleState, searchCoffee, filterUpdateState, vi
 	);
 }
 
-export default OurCoffeeLayout;
+export default ForYourPleasureLayout;
