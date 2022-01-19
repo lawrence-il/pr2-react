@@ -3,7 +3,7 @@ import { useLocation} from 'react-router-dom';
 import gradesCoffee from '../../../data';
 import useArrowUp from '../../hooks/useArrowUp/useArrowUp';
 import OurCoffeeLayout from '../OurCoffeeLayout/OurCoffeeLayout';
-import ForYourPleasureLayout from '../ForYourPleasureLayout/ForYourPleasureLayout';
+import ForYourPlLayout from '../ForYourPlLayout/ForYourPlLayout';
 
 import './ProductsPage.sass';
 
@@ -69,6 +69,6 @@ const withLayout = Component => props => {
 }
 
 const OurCoffeeLayoutWithLayout = withLayout(OurCoffeeLayout);
-const ForYourPleasureLayoutWithLayout = withLayout(ForYourPleasureLayout); 
+const ForYourPlLayoutWithLayout = withLayout(ForYourPlLayout); 
 
-export  {OurCoffeeLayoutWithLayout, ForYourPleasureLayoutWithLayout};
+export  {OurCoffeeLayoutWithLayout, ForYourPlLayoutWithLayout};

@@ -26,7 +26,7 @@ const OurCoffeeLayout = ({toggleState, searchCoffee, filterUpdateState, visibleC
 					/>
 
 			<ErrorBoundary>
-                <GradesCoffee/>
+                <GradesCoffee searchCoffee={searchCoffee} filterUpdateState={filterUpdateState}/>
 			</ErrorBoundary>
 
 			<ErrorBoundary>
