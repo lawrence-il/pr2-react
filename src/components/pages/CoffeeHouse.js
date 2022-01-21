@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import ErrorBoundary from '../errorBoundary/ErrorBoundary';
 import itemsOurBest from '../../data';
 import Header from '../header/Header';
@@ -20,6 +21,23 @@ const CoffeeHouse = (props) => {
 
     return (
         <div className="app" onWheel={pageUp} onClick={toggleMenu}>
+            <Helmet>
+				{/* Primary Meta Tags */}
+				<title>Coffee House</title>
+				<meta name="title" content="Everything You Love About Coffee"></meta>
+
+				{/* Open Graph / Facebook */}
+				<meta property="og:type" content="website"></meta>
+				<meta property="og:url" content="https://"></meta>
+				<meta property="og:title" content="Everything You Love About Coffee"></meta>
+				<meta property="og:image" content="https://"></meta>
+
+				{/* Twitter */}
+				<meta property="twitter:card" content="summary_large_image"></meta>
+				<meta property="twitter:url" content="https://"></meta>
+				<meta property="twitter:title" content="Everything You Love About Coffee"></meta>
+				<meta property="twitter:image" content="https://"></meta>
+        	</Helmet>
             <section className="promo">
                 <div className="container">
                     <Header toggleState={toggleState}/>

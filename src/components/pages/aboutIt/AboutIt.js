@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import Header from "../../header/Header";
 import Footer from "../../footer/Footer";
 import gradesCoffee from "../../../data";
@@ -23,6 +24,23 @@ const AboutIt = ({ToggleMenu}) => {
     
     return (
     <div className="our-coffee-page" onClick={toggleMenu}>
+        <Helmet>
+            {/* Primary Meta Tags */}
+            <title>About it</title>
+            <meta name="title" content="About it"></meta>
+
+            {/* Open Graph / Facebook */}
+            <meta property="og:type" content="website"></meta>
+            <meta property="og:url" content="https://"></meta>
+            <meta property="og:title" content="About it"></meta>
+            <meta property="og:image" content="https://"></meta>
+
+            {/* Twitter */}
+            <meta property="twitter:card" content="summary_large_image"></meta>
+            <meta property="twitter:url" content="https://"></meta>
+            <meta property="twitter:title" content="About it"></meta>
+            <meta property="twitter:image" content="https://"></meta>
+        </Helmet>
         <section className="our-coffee">
                     <div className="container">
                     <Header toggleState={toggleState}/>

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useLocation} from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import ErrorBoundary from '../../errorBoundary/ErrorBoundary';
 import gradesCoffee from '../../../data';
 import Header from '../../header/Header';
@@ -17,7 +18,6 @@ import './OurCoffeeForYourPl.sass';
 
 
 const OurCoffee = (props) => {
-
 
 	const [gradesCof, setGradesCoffee] = useState(gradesCoffee);
 	const [search, setSearch] = useState('');
@@ -70,7 +70,23 @@ const OurCoffee = (props) => {
 				onWheel={pageUp} 
 				onClick={toggleMenu}
 				>
+			<Helmet>
+				{/* Primary Meta Tags */}
+				<title>{pathname === '/ourCoffee/' ? "Our coffee" : "For your pleasure"}</title>
+				<meta name="title" content={pathname === '/ourCoffee/' ? "Our coffee" : "For your pleasure"}></meta>
 
+				{/* Open Graph / Facebook */}
+				<meta property="og:type" content="website"></meta>
+				<meta property="og:url" content="https://"></meta>
+				<meta property="og:title" content={pathname === '/ourCoffee/' ? "Our coffee" : "For your pleasure"}></meta>
+				<meta property="og:image" content="https://"></meta>
+
+				{/* Twitter */}
+				<meta property="twitter:card" content="summary_large_image"></meta>
+				<meta property="twitter:url" content="https://"></meta>
+				<meta property="twitter:title" content={pathname === '/ourCoffee/' ? "Our coffee" : "For your pleasure"}></meta>
+				<meta property="twitter:image" content="https://"></meta>
+        	</Helmet>
 				<section className={pathname === '/ourCoffee/' ? "our-coffee" : "for-your-pleasure"} >
 							<div className="container">
 							<Header toggleState={toggleState}/>
