@@ -1,11 +1,11 @@
 import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { AboutIt } from '../page';
-import GradesCoffee from '../GradesCoffee/GradesCoffee';
-import ToggleMenu from '../ToogleMenu/ToggleMenu';
+import { AboutIt } from '../pages';
+import GradesCoffee from '../gradesCoffee/GradesCoffee';
+import ToggleMenu from '../toogleMenu/ToggleMenu';
 
-const CoffeeHouse = lazy(() => import('../page/CoffeeHouse'));
-const OurCoffeeForYourPl = lazy(() => import('../page/OurCoffeeForYourPl/OurCoffeeForYourPl'))
+const CoffeeHouse = lazy(() => import('../pages/CoffeeHouse'));
+const OurCoffeeForYourPl = lazy(() => import('../pages/ourCoffeeForYourPl/OurCoffeeForYourPl'))
 
 const App = () => {
   

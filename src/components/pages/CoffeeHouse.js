@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
+import ErrorBoundary from '../errorBoundary/ErrorBoundary';
 import itemsOurBest from '../../data';
-import Header from '../Header/Header';
+import Header from '../header/Header';
 import promo from '../promo/promo';
 import aboutUs from '../aboutUs/aboutUs';
-import OurBest from '../OurBest/OurBest';
-import Footer from '../Footer/Footer';
+import OurBest from '../ourBest/OurBest';
+import Footer from '../footer/Footer';
 import useArrowUp from '../hooks/useArrowUp/useArrowUp';
 
 

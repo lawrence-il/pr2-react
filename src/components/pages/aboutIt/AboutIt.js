@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Header from "../../Header/Header";
-import Footer from "../../Footer/Footer";
+import Header from "../../header/Header";
+import Footer from "../../footer/Footer";
 import gradesCoffee from "../../../data";
 import beansHTML from "../../beans/beans";
-import '../OurCoffeeForYourPl/OurCoffeeForYourPl';
+import '../ourCoffeeForYourPl/OurCoffeeForYourPl';
 import './aboutIt.sass'
 
 

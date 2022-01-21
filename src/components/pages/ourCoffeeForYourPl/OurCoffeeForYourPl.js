@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import { useLocation} from 'react-router-dom';
-import ErrorBoundary from '../../ErrorBoundary/ErrorBoundary';
+import ErrorBoundary from '../../errorBoundary/ErrorBoundary';
 import gradesCoffee from '../../../data';
-import Header from '../../Header/Header';
-import img1 from "../../AboutOurBeans/img/img1.png";
-import img2 from "../../AboutOurBeans/img/img2.png";
-import cup from "../../AboutOurBeans/img/cup.png"
-import cup2 from "../../AboutOurBeans/img/cup2.png"
-import AboutOurBeans from '../../AboutOurBeans/AboutOurBeans';
-import GradesCoffeeCards from '../../GradesCoffeeCards/GradesCoffeeCards'
-import Footer from '../../Footer/Footer';
+import Header from '../../header/Header';
+import img1 from "../../aboutOurBeans/img/img1.png";
+import img2 from "../../aboutOurBeans/img/img2.png";
+import cup from "../../aboutOurBeans/img/cup.png"
+import cup2 from "../../aboutOurBeans/img/cup2.png"
+import AboutOurBeans from '../../aboutOurBeans/AboutOurBeans';
+import GradesCoffeeCards from '../../gradesCoffeeCards/GradesCoffeeCards'
+import Footer from '../../footer/Footer';
 import useArrowUp from '../../hooks/useArrowUp/useArrowUp';
 
 

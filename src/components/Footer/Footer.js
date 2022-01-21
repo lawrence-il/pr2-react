@@ -1,4 +1,4 @@
-import Header from '../Header/Header';
+import Header from '../header/Header';
 import beansHTML from '../beans/beans';
 import './footer.sass';
 
