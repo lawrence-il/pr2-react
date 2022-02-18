@@ -3,7 +3,7 @@ import { useLocation} from 'react-router-dom';
 import gradesCoffee from '../../../data';
 import useArrowUp from '../../hooks/useArrowUp/useArrowUp';
 import OurCoffeeLayout from '../OurCoffeeLayout/OurCoffeeLayout';
-import ForYourPlLayout from '../ForYourPlLayout/ForYourPlLayout';
+import ForYourPlLayout from '../forYourPlLayout/ForYourPlLayout';
 
 import './ProductsPage.sass';
 
