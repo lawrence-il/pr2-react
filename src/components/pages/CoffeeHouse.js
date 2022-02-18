@@ -13,7 +13,7 @@ import useArrowUp from '../hooks/useArrowUp/useArrowUp';
 const CoffeeHouse = (props) => {
 
     const [toggleState, setToggleState] = useState(0);
-    const {pageUp, view} = useArrowUp();
+    const {pageUp, arrowUp} = useArrowUp();
   
     const toggleMenu = (e) => {
 		setToggleState((toggleState) => props.ToggleMenu(e, toggleState))
@@ -53,7 +53,7 @@ const CoffeeHouse = (props) => {
             
             <Footer/>
 
-            {view}
+            {arrowUp}
 
         </div>
     );

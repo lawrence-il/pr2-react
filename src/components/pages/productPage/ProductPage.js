@@ -15,7 +15,7 @@ const ProductPage = (props) => {
 	const [toggleState, setToggleState] = useState(0);
 
 	const {pathname} = useLocation();
-	const {pageUp, view} = useArrowUp();
+	const {pageUp, arrowUp} = useArrowUp();
 
 	const showCoffee = (gradesCof, search) => {
 		if(search.length === 0) {
@@ -61,7 +61,7 @@ const ProductPage = (props) => {
 				 
 				{props.render(toggleState, searchCoffee, filterUpdateState, visibleCoffeeCard)}
 
-				{view}
+				{arrowUp}
 			</div>
 		);
 
