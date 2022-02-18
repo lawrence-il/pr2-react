@@ -1,5 +1,5 @@
-import SearchPanel from "../SearchPanel/SearchPanel";
-import FilterPanel from '../FilterPanel/FilterPanel';
+import SearchPanel from "../searchPanel/SearchPanel";
+import FilterPanel from '../filterPanel/FilterPanel';
 import './grades-coffee.sass';
 
 const GradesCoffee = ({searchCoffee, filterUpdateState}) => (

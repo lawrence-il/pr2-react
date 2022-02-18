@@ -1,5 +1,5 @@
-import AboutIt from './AboutIt/AboutIt';
-import  {OurCoffeeLayoutWithLayout, ForYourPlLayoutWithLayout} from './ProductsPage/ProductsPage';
+import AboutIt from './aboutIt/AboutIt';
+import  {OurCoffeeLayoutWithLayout, ForYourPlLayoutWithLayout} from './productsPage/ProductsPage';
 import CoffeeHouse from './CoffeeHouse';
 
 export {AboutIt, OurCoffeeLayoutWithLayout, ForYourPlLayoutWithLayout, CoffeeHouse};

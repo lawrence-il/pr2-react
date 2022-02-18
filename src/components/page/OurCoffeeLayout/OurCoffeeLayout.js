@@ -1,11 +1,11 @@
-import img1 from "../../AboutOurBeans/img/img1.png";
-import img2 from "../../AboutOurBeans/img/img2.png";
-import AboutOurBeans from '../../AboutOurBeans/AboutOurBeans';
-import GradesCoffeeCards from '../../GradesCoffeeCards/GradesCoffeeCards';
-import ErrorBoundary from '../../ErrorBoundary/ErrorBoundary';
-import Header from '../../Header/Header';
-import Footer from '../../Footer/Footer';
-import GradesCoffee from '../../GradesCoffee/GradesCoffee';
+import img1 from "../../aboutOurBeans/img/img1.png";
+import img2 from "../../aboutOurBeans/img/img2.png";
+import AboutOurBeans from '../../aboutOurBeans/AboutOurBeans';
+import GradesCoffeeCards from '../../gradesCoffeeCards/GradesCoffeeCards';
+import ErrorBoundary from '../../errorBoundary/ErrorBoundary';
+import Header from '../../header/Header';
+import Footer from '../../footer/Footer';
+import GradesCoffee from '../../gradesCoffee/GradesCoffee';
 
 const OurCoffeeLayout = ({toggleState, searchCoffee, filterUpdateState, visibleCoffeeCard}) => {
 

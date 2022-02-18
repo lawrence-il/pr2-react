@@ -1,10 +1,10 @@
-import cup from "../../AboutOurBeans/img/cup.png";
-import cup2 from "../../AboutOurBeans/img/cup2.png";
-import AboutOurBeans from '../../AboutOurBeans/AboutOurBeans';
-import GradesCoffeeCards from '../../GradesCoffeeCards/GradesCoffeeCards';
-import ErrorBoundary from '../../ErrorBoundary/ErrorBoundary';
-import Header from '../../Header/Header';
-import Footer from '../../Footer/Footer';
+import cup from "../../aboutOurBeans/img/cup.png";
+import cup2 from "../../aboutOurBeans/img/cup2.png";
+import AboutOurBeans from '../../aboutOurBeans/AboutOurBeans';
+import GradesCoffeeCards from '../../gradesCoffeeCards/GradesCoffeeCards';
+import ErrorBoundary from '../../errorBoundary/ErrorBoundary';
+import Header from '../../header/Header';
+import Footer from '../../footer/Footer';
 
 
 const ForYourPleasureLayout = ({toggleState, searchCoffee, filterUpdateState, visibleCoffeeCard}) => {

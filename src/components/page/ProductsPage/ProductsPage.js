@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useLocation} from 'react-router-dom';
 import gradesCoffee from '../../../data';
 import useArrowUp from '../../hooks/useArrowUp/useArrowUp';
-import OurCoffeeLayout from '../OurCoffeeLayout/OurCoffeeLayout';
+import OurCoffeeLayout from '../ourCoffeeLayout/OurCoffeeLayout';
 import ForYourPlLayout from '../forYourPlLayout/ForYourPlLayout';
 
 import './ProductsPage.sass';

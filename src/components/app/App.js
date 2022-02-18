@@ -1,8 +1,8 @@
 import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AboutIt } from '../page';
-import {OurCoffeeLayoutWithLayout, ForYourPlLayoutWithLayout} from '../page/ProductsPage/ProductsPage'
-import ToggleMenu from '../ToogleMenu/ToggleMenu';
+import {OurCoffeeLayoutWithLayout, ForYourPlLayoutWithLayout} from '../page/productsPage/ProductsPage'
+import ToggleMenu from '../toogleMenu/ToggleMenu';
 
 const CoffeeHouse = lazy(() => import('../page/CoffeeHouse'));
 
