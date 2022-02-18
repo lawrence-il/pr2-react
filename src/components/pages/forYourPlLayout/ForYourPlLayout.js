@@ -15,7 +15,7 @@ const ForYourPlLayout = ({toggleState, searchCoffee, filterUpdateState, visibleC
 
 			<Helmet>
 				{/* Primary Meta Tags */}
-				<title>"For your pleasure"</title>
+				<title>For your pleasure</title>
 				<meta name="title" content="For your pleasure"></meta>
 
 				{/* Open Graph / Facebook */}
@@ -36,7 +36,7 @@ const ForYourPlLayout = ({toggleState, searchCoffee, filterUpdateState, visibleC
 						<div className="container">
 						<Header toggleState={toggleState}/>
 						<h1 className="for-your-pleasure__title">
-							'For your pleasure'
+							For your pleasure
 						</h1>
 						</div>
 			</section>

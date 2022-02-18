@@ -15,7 +15,7 @@ const OurCoffeeLayout = ({toggleState, searchCoffee, filterUpdateState, visibleC
 
 			<Helmet>
 				{/* Primary Meta Tags */}
-				<title>"Our coffee"</title>
+				<title>Our coffee</title>
 				<meta name="title" content="Our coffee"></meta>
 
 				{/* Open Graph / Facebook */}
@@ -34,7 +34,7 @@ const OurCoffeeLayout = ({toggleState, searchCoffee, filterUpdateState, visibleC
 						<div className="container">
 						<Header toggleState={toggleState}/>
 						<h1 className="our-coffee__title">
-							'Our Coffee'
+							Our Coffee
 						</h1>
 						</div>
 			</section>
