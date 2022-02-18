@@ -9,7 +9,7 @@ import './ProductsPage.sass';
 
 const withLayout = Component => props => {
 
-	const [gradesCof, setGradesCoffee] = useState(gradesCoffee);
+	const [gradesCof] = useState(gradesCoffee);
 	const [search, setSearch] = useState('');
 	const [filter, setFilter] = useState('All');
 	const [toggleState, setToggleState] = useState(0);
