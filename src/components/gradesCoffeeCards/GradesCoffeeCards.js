@@ -8,7 +8,7 @@ const GradesCoffeeCards = ({visibleCoffeeCard}) => {
         key={id}
         timeout={400}
         classNames='grades-coffee__cards'>
-            <Link className="grades-coffee__card" to={`/ourCoffee/about-it/${id}`} >
+            <Link className="grades-coffee__card" to={`/ourCoffee/about-it/${id}`} > {/* id здесь для перехода на нужное кофе*/}
                 <div className="grades-coffee__wrapper-img">
                     <img src={urlImgX1} srcSet={`${urlImgX1} 1x, ${urlImgX2} 2x`} alt={name} className="grades-coffee__img"/>
                 </div>

@@ -1,4 +1,5 @@
 import { Component } from "react/cjs/react.production.min";
+import ErrorMessage from "../errorMessage/ErrorMessage";
 
 class ErrorBoundary extends Component {
     state = {
@@ -12,9 +13,12 @@ class ErrorBoundary extends Component {
 
     render() {
         if (this.state.error) {
-            return <h2 style={{textAlign: "center"}}>error</h2>
-        } else if (!this.props.children) {
-            return null;
+            return (
+                <>
+                    <ErrorMessage/>
+                    <h2 style={{textAlign: "center"}}>error</h2>
+                </>
+            )
         }
 
         return this.props.children
