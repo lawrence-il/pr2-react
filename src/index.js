@@ -5,10 +5,6 @@ import App from './components/app/App';
 import './sass/media-index.sass';
 
 
-
-
-
-
 ReactDOM.render(
   <App/>,
   document.querySelector('#root')

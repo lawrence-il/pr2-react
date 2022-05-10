@@ -22,12 +22,13 @@ const App = () => {
 						element={
 							<ProductPage
 								render={
-									(toggleState, searchCoffee, filterUpdateState, visibleCoffeeCard) => (
+									(toggleState, searchCoffee, filterUpdateState, visibleCoffeeCard, filter) => (
 										<OurCoffeeLayout
 											toggleState={toggleState}
 											searchCoffee={searchCoffee}
 											filterUpdateState={filterUpdateState}
 											visibleCoffeeCard = {visibleCoffeeCard}
+											valueFilter={filter}
 										/>
 									)
 									}

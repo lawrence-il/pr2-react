@@ -59,7 +59,7 @@ const ProductPage = (props) => {
 				onClick={toggleMenu}
 				>
 				 
-				{props.render(toggleState, searchCoffee, filterUpdateState, visibleCoffeeCard)}
+				{props.render(toggleState, searchCoffee, filterUpdateState, visibleCoffeeCard, filter)}
 
 				{arrowUp}
 			</div>

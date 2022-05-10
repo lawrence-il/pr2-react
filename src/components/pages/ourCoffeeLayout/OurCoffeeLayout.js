@@ -8,7 +8,7 @@ import Header from '../../header/Header';
 import Footer from '../../footer/Footer';
 import GradesCoffee from '../../gradesCoffee/GradesCoffee';
 
-const OurCoffeeLayout = ({toggleState, searchCoffee, filterUpdateState, visibleCoffeeCard}) => {
+const OurCoffeeLayout = ({toggleState, searchCoffee, filterUpdateState, visibleCoffeeCard, valueFilter}) => {
 
     return (
 		<>
@@ -45,7 +45,7 @@ const OurCoffeeLayout = ({toggleState, searchCoffee, filterUpdateState, visibleC
 					/>
 
 			<ErrorBoundary>
-                <GradesCoffee searchCoffee={searchCoffee} filterUpdateState={filterUpdateState}/>
+                <GradesCoffee searchCoffee={searchCoffee} filterUpdateState={filterUpdateState} valueFilter={valueFilter}/>
 			</ErrorBoundary>
 
 			<ErrorBoundary>

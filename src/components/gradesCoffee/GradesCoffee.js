@@ -2,7 +2,7 @@ import SearchPanel from "../searchPanel/SearchPanel";
 import FilterPanel from '../filterPanel/FilterPanel';
 import './grades-coffee.sass';
 
-const GradesCoffee = ({searchCoffee, filterUpdateState}) => (
+const GradesCoffee = ({searchCoffee, filterUpdateState, valueFilter}) => (
     <section className="grades-coffee">
         <div className="container">
             <div className="grades-coffee__choice-panel">
@@ -16,7 +16,7 @@ const GradesCoffee = ({searchCoffee, filterUpdateState}) => (
                     <div className="grades-coffee__text">
                         Or filter
                     </div>
-                    <FilterPanel filterUpdateState={filterUpdateState}/>
+                    <FilterPanel filterUpdateState={filterUpdateState} valueFilter={valueFilter}/>
                 </div>
             </div>
 
