@@ -7,14 +7,10 @@
 
 ### Используемые технологии:
 --- 
-- Redux;
-- TS;
-- Redux Toolkit; 
-- RTK Query;
-- React Transition Group;
+- React,
+- React Transition Group,
+- react helmet,
 - React Router
-- Swiper;
-- Uuid.
 
 ### Шаги для запуска приложения
 ---
