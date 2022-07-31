@@ -15,9 +15,9 @@
 ### Шаги для запуска приложения
 ---
 #### Получить исходный код приложения
-`git clone https://github.com/lawrence-il/orgamic-react.git`
+`git clone https://github.com/lawrence-il/pr2-react.git`
 #### Перейти в папки с приложением
-`cd orgamic-react`
+`cd pr2-react`
 #### Скачать пакеты и их зависимости
 `npm i`
 ##### При ошибки npm i
